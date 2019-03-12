@@ -1,62 +1,308 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="styles.css">
-  <script src="main.js"></script>
+<!doctype html>
+<html lang="en">
 
-	<meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <title>Bootstrap 4 Layouts</title>
 </head>
 
-<body>
-<div id="main-content", class="wrapper">
-  <h1>How Can You Reduce You're Energy Bills?</h1>
-  <p>My first paragraph.</p>
+<body data-spy="scroll" data-target=".site-nav" data-offset="62">
+
+  <header id="page-top" class="site-header">
+
+    <nav class="site-nav family-sans text-uppercase navbar navbar-expand-md navbar-dark fixed-top">
+
+      <div class="container-fluid">
+
+        <a class="navbar-brand" href="#page-top">
+        <img src="https://www.plymouthenergycommunity.com/images/6.jpg" alt="Plymouth Energy Community"></a>
+
+        <button type="button" class="navbar-toggler border-0" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav"
+          aria-label="Toggle Navigation">
+          <!-- <span class="navbar-toggler-icon"></span> -->
+          <img src="https://www.plymouthenergycommunity.com/images/18.jpg" width="36" height="23" alt="">
+        </button>
+
+        <section class="collapse navbar-collapse" id="myTogglerNav">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-item nav-link" href="#page-top">top</a>
+            <a class="nav-item nav-link" href="#page-start">get started</a>
+            <a class="nav-item nav-link" href="#page-insulation">insulation</a>
+            <a class="nav-item nav-link" href="#page-heating">heating</a>
+            <a class="nav-item nav-link" href="#page-other">other improvements</a>
+          </div>
+        </section>
+
+      </div>
+
+    </nav>
+
+    <section class="layout-hero d-flex align-items-center text-light text-center mt-5 ">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-11 col-sm-10 col-md-8 animated fadeInUp">
+            <h3 class="page-section-title">Reducing Your Bills</h3>
+            <p class="page-section-text">This site will teach about reducing your bills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </header>
+
+
+    <!-- Choose path -->
+    <article id="page-start" class="page-section bg-secondary">
+
+      <header class="page-section-header container text-light text-center py-5">
+        <div class="row justify-content-center">
+          <div class="col-11 col-sm-10 col-md-8">
+             <h2>Where Do You Want To Start?</h2>
+          </div>
+        </div>
+      </header>
+
+      <section class="layout-cards container">
+
+        <div class="row justify-content-center">
+
+          <div class="col-8 col-sm-12 col-lg-10">
+
+            <div class="card-deck">
+
+              <section class="card mb-5">
+                <i class="card-icon card-img-top img-fluid d-flex justify-content-center fas fa-home py-3"></i>
+                <div class="card-body">
+                  <h4 class="layout-title card-title">Insulating My Home</h4>
+                  <p class="layout-text card-text">Learn how insulation improves your bills!</p>
+                </div>
+
+                <a role="button" class="card-button text-center m-3 py-2" href="#page-insulation">Get Started!</a>
+
+              </section>
+
+              <section class="card mb-5">
+                <i class="card-icon card-img-top img-fluid d-flex justify-content-center fas fa-burn py-3"></i>
+                <div class="card-body">
+                  <h4 class="layout-title card-title">Improve My Heating</h4>
+                  <p class="layout-text card-text">Learn how heating affect your bills!</p>
+                </div>
+                <a role="button" class="card-button text-center m-3 py-2" href="#page-heating">Get Started!</a>
+              </section>
+
+
+              <section class="card mb-5">
+                <i class="card-icon card-img-top img-fluid d-flex justify-content-center far fa-lightbulb py-3"></i>
+                <div class="card-body">
+                  <h4 class="layout-title card-title">Other Home Improvements</h4>
+                  <p class="layout-text card-text">Other ways you can reduce your bills!</p>
+                </div>
+                <a role="button" class="card-button text-center m-3 py-2" href="#page-other">Get Started!</a>
+              </section>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+    </article>
+
+    <!--Insulation-->
+    <article id="page-insulation" class="page-section text-center py-5">
+
+      <header class="page-section-header container py-5">
+        <div class="row justify-content-center">
+          <div class="col-11 col-sm-10 col-md-8">
+            <h2 class="page-section-title">Insulating My Home</h2>
+            <p class="page-section-text">This section will teach you about insulation</p>
+          </div>
+        </div>
+      </header>
+
+      <section class="d-none layout-hero bg-primary d-flex align-items-center text-light text-center py-5">
+        <div class="container">
+          <div class="row justify-content-center py-3">
+            <div class="col-11 col-sm-10 col-md-8">
+              <h3 class="page-section-title">Does your house have wall insulation?</h3>
+            </div>
+          </div>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+        </div>
+      </section>
+
+      <section class="layout-hero bg-success d-flex align-items-center text-light text-center py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-8">
+              <h3 class="page-section-title">How are your walls constructed?</h3>
+              <p class="page-section-text">With cavity<br>Solid <br>Non standard construction <br>I have no idea
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="layout-hero d-flex align-items-center text-dark text-center py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-8">
+              <h3 class="page-section-title">(Cavity Wall) Do you have any existing damp in your home?</h3>
+              <p class="page-section-text">Yes/No
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="layout-hero bg-warning d-flex align-items-center text-dark text-center py-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-8">
+              <h3 class="page-section-title">(No Idea)When was your house built?</h3>
+              <p class="page-section-text">Before 1930 <br>After 1930 <br>I don't know
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section text-dark text-center py-5">
+
+        <header class="page-section-header container py-3">
+          <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-8">
+              <h2 class="page-section-title">Which one looks like the outside walls of your home?</h2>
+              <p class="page-section-text"></p>
+            </div>
+          </div>
+        </header>
+
+        <section class="layout-multicolumn container">
+
+          <div class="row justify-content-center family-sans text-uppercase ">
+
+            <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
+              <a data-toggle="modal" data-target="#site-modal" data-highres="images/01.png" href="#">
+                <img class="layout-image img-thumbnail" src="images/01.png" alt="Monster Image 01">
+              </a>
+              <h3 class="pt-3">1</h3>
+            </section>
+
+            <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
+              <a data-toggle="modal" data-target="#site-modal" data-highres="images/02.png" href="#">
+                <img class="layout-image img-thumbnail" src="images/02.png" alt="Monster Image 02">
+              </a>
+              <h3 class="pt-3">2</h3>
+            </section>
+
+            <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
+              <a data-toggle="modal" data-target="#site-modal" data-highres="images/03.png" href="#">
+                <img class="layout-image img-thumbnail" src="images/03.png" alt="Monster Image 03">
+              </a>
+              <h3 class="pt-3">3</h3>
+            </section>
+
+            <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
+              <a data-toggle="modal" data-target="#site-modal" data-highres="images/04.png" href="#">
+                <img class="layout-image img-thumbnail" src="images/04.png" alt="Monster Image 04">
+              </a>
+              <h3 class="pt-3">4</h3>
+            </section>
+
+            <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
+              <a data-toggle="modal" data-target="#site-modal" data-highres="images/05.png" href="#">
+                <img class="layout-image img-thumbnail" src="images/05.png" alt="Monster Image 04">
+              </a>
+              <h3 class="pt-3">5</h3>
+            </section>
+
+            <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
+              <a data-toggle="modal" data-target="#site-modal" data-highres="images/06.png" href="#">
+                <img class="layout-image img-thumbnail" src="images/06.png" alt="Monster Image 04">
+              </a>
+              <h3 class="pt-3">6</h3>
+            </section>
 
 
 
-</div>
+          </div>
+
+        </section>
+      </article>
+
+    </article>
 
 
-<div id="main-content", class="wrapper">
-  <h1></h1>
-  <p>My first paragraph.</p>
+    <!--Heating-->
+    <article id="page-heating" class="page-section text-center py-5">
+
+      <header class="page-section-header container">
+        <div class="row justify-content-center">
+          <div class="col-11 col-sm-10 col-md-8">
+            <h2 class="page-section-title">Improving My Heating</h2>
+            <p class="page-section-text">This section will teach you about heating</p>
+          </div>
+        </div>
+      </header>
+
+    </article>
+
+    <!--Other Improvements-->
+    <article id="page-other" class="page-section text-center py-5">
+
+      <header class="page-section-header container">
+        <div class="row justify-content-center">
+          <div class="col-11 col-sm-10 col-md-8">
+            <h2 class="page-section-title">Other Home Improvements</h2>
+            <p class="page-section-text">This section will teach you about other ways to reduce your bills</p>
+          </div>
+        </div>
+      </header>
+
+    </article>
 
 
 
-</div>
+  <footer class="site-footer text-light d-flex justify-content-center">
 
-<div id="main-content", class="wrapper">
+    <section class="layout-social py-3">
 
-  <div id="main-content", class="wrapper1">
-    <h1>How Can You reduce You're Energy Bills?</h1>
-    <p>My first paragraph.</p>
+      <a class="text-light py-2" href="https://www.plymouthenergycommunity.com/">
+        <i class="layout-icon fas fa-globe"></i>
+      </a>
+      <a class="text-light py-2" href="https://twitter.com/plymenergycom">
+        <i class="layout-icon fab fa-twitter"></i>
+      </a>
+      <a class="text-light px-2" href="https://www.facebook.com/PlymouthEnergyCommunity">
+        <i class="layout-icon fab fa-facebook"></i>
+      </a>
+      <a class="text-light px-2" href="https://www.linkedin.com/company/9276417?trk=tyah&trkInfo=idx%3A1-1-1%2CtarId%3A1424881325715%2Ctas%3Aplymouth+energy+community">
+        <i class="layout-icon fab fa-linkedin"></i>
+      </a>
 
+    </section>
 
-  </div>
-
-  <div id="main-content", class="wrapper1">
-    <h1>How Can You reduce You're Energy Bills?</h1>
-    <p>My first paragraph.</p>
-
-
-  </div>
-</div>
-
-
-<div id="main-content", class="wrapper">
-  <h1>How Can You reduce You're Energy Bills?</h1>
-  <p>My first paragraph.</p>
+  </footer>
 
 
 
-</div>
-
-<div id="main-content", class="wrapper">
-  <div class="b"></div>
-  <div class="b"></div>
-  <div class="b"></div>
-  <div class="b"></div>
-
-</div>
 </body>
+
 </html>
