@@ -12,9 +12,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.compatibility.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <script src="js/script.js"></script>
 
-  <title>Bootstrap 4 Layouts</title>
+  <title>PEC Web Tool</title>
 </head>
 
 <body data-spy="scroll" data-target=".site-nav" data-offset="62">
@@ -80,16 +81,16 @@
 
           <div class="col-8 col-sm-12 col-lg-10">
 
-            <div class="card-deck">
+            <div class="w3-animate-zoom card-deck">
 
-              <section class="card mb-5">
+              <section class=" card mb-5 ">
                 <i class="card-icon card-img-top img-fluid d-flex justify-content-center fas fa-home py-3"></i>
                 <div class="card-body">
                   <h4 class="layout-title card-title">Insulating My Home</h4>
                   <p class="layout-text card-text">Learn how insulation improves your bills!</p>
                 </div>
 
-                <a role="button" class="card-button text-center m-3 py-2" href="#page-insulation">Get Started!</a>
+                <a role="button" class="btn btn-outline-primary" href="#page-insulation">Get Started!</a>
 
               </section>
 
@@ -149,37 +150,47 @@
 
       <section class="layout-hero bg-success d-flex align-items-center text-light text-center py-5">
         <div class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">How are your walls constructed?</h3>
-              <p class="page-section-text">With cavity<br>Solid <br>Non standard construction <br>I have no idea
-              </p>
+
             </div>
           </div>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">With Cavity</a>
+
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Solid</a>
+
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Non Standard Construction</a>
+
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">I have no idea</a>
+
         </div>
       </section>
 
       <section class="layout-hero d-flex align-items-center text-dark text-center py-5">
         <div class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">(Cavity Wall) Do you have any existing damp in your home?</h3>
-              <p class="page-section-text">Yes/No
-              </p>
+
             </div>
           </div>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
         </div>
       </section>
 
       <section class="layout-hero bg-warning d-flex align-items-center text-dark text-center py-5">
         <div class="container">
-          <div class="row justify-content-center">
+          <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">(No Idea)When was your house built?</h3>
-              <p class="page-section-text">Before 1930 <br>After 1930 <br>I don't know
-              </p>
+
             </div>
           </div>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Before 1930</a>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">After 1930</a>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">I don't know</a>
         </div>
       </section>
 
@@ -262,6 +273,18 @@
         </div>
       </header>
 
+      <section class="d-none layout-hero bg-primary d-flex align-items-center text-light text-center py-5">
+        <div class="container">
+          <div class="row justify-content-center py-3">
+            <div class="col-11 col-sm-10 col-md-8">
+              <h3 class="page-section-title">What is your current heating system?</h3>
+            </div>
+          </div>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Night Storage Heater</a>
+          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+        </div>
+      </section>
+
     </article>
 
     <!--Other Improvements-->
@@ -275,6 +298,9 @@
           </div>
         </div>
       </header>
+
+
+
 
     </article>
 
