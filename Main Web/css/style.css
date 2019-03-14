@@ -138,3 +138,7 @@ body {
     background-color: #28235d !important;
     color: #fff !important;
 }
+
+.w3-animate-opacity {
+  animation:opac 3s !important;
+}
