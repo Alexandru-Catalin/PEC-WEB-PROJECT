@@ -100,7 +100,9 @@
                   <h4 class="layout-title card-title">Improve My Heating</h4>
                   <p class="layout-text card-text">Learn how heating affect your bills!</p>
                 </div>
-                <a role="button" class="card-button text-center m-3 py-2" href="#page-heating">Get Started!</a>
+
+                <a onclick="nextSection('page-heating')" href="javascript:void(0);" class="card-button text-center m-3 py-2 w3-spin">Get Started!</a>
+
               </section>
 
 
@@ -110,7 +112,7 @@
                   <h4 class="layout-title card-title">Other Home Improvements</h4>
                   <p class="layout-text card-text">Other ways you can reduce your bills!</p>
                 </div>
-                <a role="button" class="card-button text-center m-3 py-2" href="#page-other">Get Started!</a>
+                <a onclick="nextSection('page-other')" href="javascript:void(0);" class="card-button text-center m-3 py-2 w3-spin">Get Started!</a>
               </section>
 
             </div>
@@ -342,7 +344,7 @@
 
 
     <!--Heating-->
-    <article id="page-heating" class="page-section text-center py-5">
+    <article id="page-heating" style="display:none;" class="page-section text-center py-5 w3-animate-opacity">
 
       <header class="page-section-header container">
         <div class="row justify-content-center">
@@ -353,22 +355,24 @@
         </div>
       </header>
 
-
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="HA2" style="display:block;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">What is your current heating system?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Night storage heaters</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Gas central heating</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Other</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Individual room heaters</a>
+          <a onclick="nextSection('HA3')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Night storage heaters</a>
+          <a onclick="nextSection('HA4')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Gas central heating</a>
+          <a onclick="nextSection('S13')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Other</a>
+          <a onclick="nextSection('IRH1')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Individual room heaters</a>
         </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="HA3" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -376,12 +380,14 @@
               <h3 class="page-section-title">Are you night storage heaters more then 5 years old?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S11')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
+          <a onclick="nextSection('S12')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="S11" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -391,8 +397,10 @@
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Guidance on old storage heaters</a>
         </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="S12" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -402,17 +410,23 @@
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Guidance on newer storage heaters</a>
         </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="S13" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Other centralised heating</h3>
               <h3 class="page-section-title">As your heating system is relatively unique we would recomend a call or visit with one of our advisors to look at ways to improve your heating</h3>
             </div>
+          </div>
+        </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="HA4" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -420,12 +434,14 @@
               <h3 class="page-section-title">Is your boiler broken (not reliably providing heat or hot water when you need it?)</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S15')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('HA5')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="S15" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -433,22 +449,39 @@
             </div>
           </div>
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Broken boiler advice</a>
+        </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="HA5" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
-              <h3 class="page-section-title">No</h3>
               <h3 class="page-section-title">Is your boiler over 10 years old?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Old boiler advice</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Heating controls</a>
+          <a onclick="nextSection('S16')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('S14')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+  <div id="S16" style="display:none;">
+    <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
+      <div class="container">
+        <div class="row justify-content-center py-3">
+          <div class="col-11 col-sm-10 col-md-8">
+            <h3 class="page-section-title">Yes</h3>
+          </div>
+        </div>
+        <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Old boiler advice</a>
+      </div>
+    </section>
+  </div>
+
+  <div id="S14" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -459,8 +492,10 @@
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Advice about heating controls</a>
         </div>
       </section>
+    </div>
 
-      <section class="d-none layout-hero bg-primary  align-items-center text-light text-center py-5">
+    <div id="IRH1" style="display:none;">
+      <section class="layout-hero bg-primary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -470,11 +505,12 @@
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Advice about first time central heating</a>
         </div>
       </section>
+    </div>
 
     </article>
 
     <!--Other Improvements-->
-    <article id="page-other" class="page-section text-center py-5">
+    <article id="page-other" style="display:none;" class="page-section text-center py-5 w3-animate-opacity">
 
       <header class="page-section-header container">
         <div class="row justify-content-center">
@@ -485,28 +521,35 @@
         </div>
       </header>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+    <div id="OA1" style="display:block;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Home improvements</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Light bulb survey</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Is your house draughty?</a>
+          <a onclick="nextSection('OA2')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Light bulb survey</a>
+          <a onclick="nextSection('OB1')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Is your house draughty?</a>
         </div>
       </section>
+    </div>
 
+    <div id="OA2" style="display:none;">
       <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Light bulb survey</h3>
             </div>
+          </div>
+          <a onclick="nextSection('S18')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Light bulb survey</a>
+        </div>
       </section>
+    </div>
 
-      <section class="page-section text-dark text-center py-5">
-
+<div id="S18" style="display:none;">
+      <section class="page-section text-dark text-center py-5 w3-animate-opacity">
         <header class="page-section-header container py-3">
           <div class="row justify-content-center">
             <div class="col-11 col-sm-10 col-md-8">
@@ -561,97 +604,109 @@
               </a>
               <h3 class="pt-3">6</h3>
             </section>
-
-
-
           </div>
-
         </section>
+      </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+    <div id="OB1" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Is your house draughty?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S19')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('OB2')" href="javascript:void(0);" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="OB2" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Do you have draught proofing seals around your door?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S19')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('OB3')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="OB3" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Do you have draught proofing seals around your windows?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S19')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('OB4')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="OB4" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Do you have a chimney that isn't used for more than a few days at a time?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S19')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('S19')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="S19" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Draught proofing may help to make your home warmer and cheaper to heat. PEC may be able to install some for free</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Continue for tips on more advanced draught proofing</a>
+          <a onclick="nextSection('OB5')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Continue for tips on more advanced draught proofing</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="OB5" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Do you have any holes or cracks in your walls, including where your walls meet door or window frames</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S21')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('OB6')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="OB6" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Do you draughts coming through where pipework leaves the house, such as your kitchen or bathroom behind kickboards or bath panels?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S21')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('OB7')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="S21" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
@@ -661,19 +716,23 @@
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Guidance on using filler and foam to block up gap</a>
         </div>
       </section>
+    </div>
 
-      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
+<div id="OB7" style="display:none;">
+      <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5 w3-animate-opacity">
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">Do you have single glazed windows?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S22')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Yes</a>
+          <a onclick="nextSection('OB8')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">No</a>
         </div>
       </section>
+    </div>
 
+<div id="S22" style="display:none;">
       <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
         <div class="container">
           <div class="row justify-content-center py-3">
@@ -684,7 +743,10 @@
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Guidance on secondary glazing</a>
         </div>
       </section>
+    </div>
 
+
+<div id="OB8" style="display:none;">
       <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
         <div class="container">
           <div class="row justify-content-center py-3">
@@ -692,11 +754,12 @@
               <h3 class="page-section-title">Do you have recessed ceiling lights upstairs or a loft hatch that does not form a seal?</h3>
             </div>
           </div>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-          <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          <a onclick="nextSection('S23')" href="javascript:void(0)" class="card-button text-center m-3 px-5 py-2">Yes</a>
         </div>
       </section>
+    </div>
 
+<div id="S23" style="display:none;">
       <section class="layout-hero bg-warning  align-items-center text-dark text-center py-5">
         <div class="container">
           <div class="row justify-content-center py-3">
@@ -707,9 +770,9 @@
           <a role="button" class="card-button text-center m-3 px-5 py-2" href="#page-heating">Guidance on reducing draughts to the loft</a>
         </div>
       </section>
+    </div>
 
     </article>
-
 
 
   <footer class="site-footer text-light  justify-content-center">
