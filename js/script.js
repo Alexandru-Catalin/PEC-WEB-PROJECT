@@ -66,6 +66,10 @@ var isI = false;
 var isH = false;
 var isO = false;
 
+var before1930 = false;
+var after1930 = false;
+var noIdea = false;
+
 function nextSection(id) {
    var e = document.getElementById(id);
    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
@@ -161,4 +165,23 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+
+function workoutWall(i) {
+
+  if (i == 1)
+  {
+    before1930 = true;
+  }
+
+  if (i == 2)
+  {
+    after1930 = true;
+  }
+
+  if (i == 3)
+  {
+    noIdea = true;
+  }
 }

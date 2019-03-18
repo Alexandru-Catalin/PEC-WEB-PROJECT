@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="css/animate.css">
   <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
@@ -67,7 +68,7 @@
 
 
     <!-- Choose path -->
-    <article id="page-start" class="page-section bg-secondary">
+    <article id="page-start" class="page-section bg-secondary py-5">
 
       <header class="page-section-header container text-light text-center py-5">
         <div class="row justify-content-center">
@@ -212,8 +213,9 @@
             <a class="carousel-control-next" href="#demo" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
-
             <p>https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/</p>
+
+
           </div>
       </div>
 
@@ -305,22 +307,22 @@
       </section>
 
       <section id="IA4"  style="display:none;" class="layout-hero bg-secondary  align-items-center text-light text-center py-5 w3-animate-opacity">
-        <div class="container">
+        <div class="container"><hr>
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">(No Idea)When was your house built?</h3>
 
             </div>
           </div>
-          <a onclick="nextSection('IA5')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">Before 1930</a>
-          <a onclick="nextSection('IA5')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">After 1930</a>
-          <a onclick="nextSection('IA5')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">I don't know</a>
+          <a onclick="nextSection('IA5'); workoutWall(1);" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">Before 1930</a>
+          <a onclick="nextSection('IA5'); workoutWall(2);" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">After 1930</a>
+          <a onclick="nextSection('IA5'); workoutWall(3);" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">I don't know</a>
         </div>
       </section>
 
       <section  id="IA5"  style="display:none;"  class="page-section bg-secondary text-light text-center py-5 w3-animate-opacity">
 
-        <header class="page-section-header container py-3">
+        <header class="page-section-header container py-3"><hr>
           <div class="row justify-content-center">
             <div class="col-11 col-sm-10 col-md-8">
               <h2 class="page-section-title">Which one looks like the outside walls of your home?</h2>
@@ -930,7 +932,7 @@
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Select</button>
         </div>
 
       </div>
