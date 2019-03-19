@@ -66,9 +66,7 @@ var isI = false;
 var isH = false;
 var isO = false;
 
-var before1930 = false;
-var after1930 = false;
-var noIdea = false;
+
 
 function nextSection(id) {
    var e = document.getElementById(id);
@@ -167,8 +165,15 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
 }
 
+var before1930 = false;
+var after1930 = false;
+var noIdea = false;
 
 function workoutWall(i) {
+
+  before1930 = false;
+  after1930 = false;
+  noIdea = false;
 
   if (i == 1)
   {
@@ -184,4 +189,55 @@ function workoutWall(i) {
   {
     noIdea = true;
   }
+}
+
+var wallPic = 0;
+
+function selectPic(i) {
+
+wallPic = i;
+
+}
+
+function calculateWall()
+{
+  if (wallPic == 1)
+  {
+    if (before1930 == true) {
+      nextSection('S100');
+    }
+    if (after1930 == true) {
+        nextSection('IA7');
+    }
+    if (noIdea == true) {
+        nextSection('IA7');
+    }
+  }
+
+  if (wallPic == 2)
+  {
+    if (before1930 == true) {
+      nextSection('S100');
+    }
+    if (after1930 == true) {
+      nextSection('IA7');
+    }
+    if (noIdea == true) {
+      nextSection('S100');
+    }
+
+    if (wallPic == 3)
+    {
+      if (before1930 == true) {
+        nextSection('S100');
+      }
+      if (after1930 == true) {
+        nextSection('IA7');
+      }
+      if (noIdea == true) {
+        nextSection('S100');
+      }
+
+  }
+}
 }

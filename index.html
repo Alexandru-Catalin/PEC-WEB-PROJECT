@@ -293,18 +293,7 @@
       </div>
 
 
-      <section id="IA7"  style="display:none;" class="layout-hero bg-secondary align-items-center text-light text-center py-5 w3-animate-opacity">
-        <div class="container"><hr>
-          <div class="row justify-content-center py-3">
-            <div class="col-11 col-sm-10 col-md-8">
-              <h3 class="page-section-title">(Cavity Wall) Do you have any existing damp in your home?</h3>
 
-            </div>
-          </div>
-          <a onclick="nextSection('')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">Yes</a>
-          <a onclick="nextSection('')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">No</a>
-        </div>
-      </section>
 
       <section id="IA4"  style="display:none;" class="layout-hero bg-secondary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container"><hr>
@@ -336,7 +325,7 @@
           <div class="row justify-content-center family-sans">
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-              <a data-toggle="modal" data-target="#site-modal" data-highres="images/01.png" href="#">
+              <a onclick="selectPic(1);" data-toggle="modal" data-target="#site-modal" data-highres="images/01.png" href="javascript:void(0);">
                 <img class="layout-image img-thumbnail" src="images/01.png" alt="Monster Image 01">
               </a>
               <h3 class="pt-3">1</h3>
@@ -384,6 +373,19 @@
           </div>
 
         </section>
+        </section>
+
+        <section id="IA7"  style="display:none;" class="layout-hero bg-secondary align-items-center text-light text-center py-5 w3-animate-opacity">
+          <div class="container"><hr>
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">(Cavity Wall) Do you have any existing damp in your home?</h3>
+
+              </div>
+            </div>
+            <a onclick="nextSection('')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">Yes</a>
+            <a onclick="nextSection('')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">No</a>
+          </div>
         </section>
 
         <section  id="IB1"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
@@ -932,7 +934,8 @@
 
         <!-- Modal footer -->
         <div class="modal-footer">
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Select</button>
+          <!-- <button class="btn btn-primary" onclick="calculateWall()" href="javascript:void(0);">Select</button> -->
+          <a onclick="calculateWall()" href="javascript:void(0);" class="btn btn-primary" data-dismiss="modal">Select</a>
         </div>
 
       </div>

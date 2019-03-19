@@ -189,32 +189,39 @@ function workoutWall(i) {
     noIdea = true;
   }
 }
+var wallPic = 0;
 
 function selectPic(i) {
 
-  if (i == 1)
+wallPic = i;
+
+}
+
+function calculateWall()
+{
+  if (wallPic == 1)
   {
     if (before1930 == true) {
-      selectSection('S100')
+      selectSection('S100');
     }
     if (after1930 == true) {
-      selectSection('IA7')
+      selectSection('IA7');
     }
     if (noIdea == true) {
-      selectSection('IA7')
+      selectSection('IA7');
     }
   }
 
-  if (i == 2)
+  if (wallPic == 2)
   {
     if (before1930 == true) {
-      selectSection('S100')
+      selectSection('S100');
     }
     if (after1930 == true) {
-      selectSection('IA7')
+      selectSection('IA7');
     }
     if (noIdea == true) {
-      selectSection('S100')
+      selectSection('S100');
     }
   }
 }
