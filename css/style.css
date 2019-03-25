@@ -50,7 +50,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
 }
 
 body {
@@ -166,9 +166,8 @@ hr {
   animation:opac 1.5s !important;
 }
 
-.carousel-inner img {
-      width: 100%;
-      height: 100%;
+.carousel-inner {
+      width: 80%;
   }
 
 
