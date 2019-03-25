@@ -164,7 +164,7 @@
 
       <!-- Wall Insulation -->
       <div id="IA2" style="display:block;">
-        <section  class="layout-hero bg-secondary  align-items-center text-light text-center py-5">
+        <section  class="layout-hero bg-secondary  align-items-center text-light text-center pt-5">
           <div class="container">
             <div class="row justify-content-center py-3">
               <div class="col-11 col-sm-10 col-md-8">
@@ -179,7 +179,7 @@
           </div>
         </section>
 
-        <div id="demo" class="carousel slide bg-secondary py-5 height text-light text-center">
+        <div id="demo" class="carousel slide bg-secondary pb-5 height text-light text-center">
 
             <!-- Indicators -->
             <ul class="carousel-indicators">
@@ -298,7 +298,7 @@
 
             <a onclick="nextSection('S3')" href="javascript:void(0); #S3" class="text-nowrap button text-center m-3 px-5 py-2">Solid</a>
 
-            <a onclick="nextSection('S100')" href="javascript:void(0); #S100" class="text-nowrap button text-center m-3 px-5 py-2">Non Standard Construction</a>
+            <a onclick="nextSection('S99')" href="javascript:void(0); #S99" class="text-nowrap button text-center m-3 px-5 py-2">Non Standard Construction</a>
 
             <a onclick="nextSection('IA4')" href="javascript:void(0); #IA4" class="text-nowrap button text-center m-3 px-5 py-2">I have no idea</a>
           </div>
@@ -393,35 +393,35 @@
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-              <a data-toggle="modal" data-target="#site-modal" data-highres="images/02.png" href="#">
+              <a onclick="selectPic(2);" data-toggle="modal" data-target="#site-modal" data-highres="images/03.png" href="#">
                 <img class="layout-image img-thumbnail" src="images/02.png" alt="Monster Image 02">
               </a>
               <h3 class="pt-3">2</h3>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-              <a data-toggle="modal" data-target="#site-modal" data-highres="images/03.png" href="#">
+              <a onclick="selectPic(3);" data-toggle="modal" data-target="#site-modal" data-highres="images/02.png" href="#">
                 <img class="layout-image img-thumbnail" src="images/03.png" alt="Monster Image 03">
               </a>
               <h3 class="pt-3">3</h3>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-              <a data-toggle="modal" data-target="#site-modal" data-highres="images/04.png" href="#">
+              <a onclick="selectPic(4);" data-toggle="modal" data-target="#site-modal" data-highres="images/04.png" href="#">
                 <img class="layout-image img-thumbnail" src="images/04.png" alt="Monster Image 04">
               </a>
               <h3 class="pt-3">4</h3>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-              <a data-toggle="modal" data-target="#site-modal" data-highres="images/05.png" href="#">
+              <a onclick="selectPic(5);" data-toggle="modal" data-target="#site-modal" data-highres="images/05.png" href="#">
                 <img class="layout-image img-thumbnail" src="images/05.png" alt="Monster Image 04">
               </a>
               <h3 class="pt-3">5</h3>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-              <a data-toggle="modal" data-target="#site-modal" data-highres="images/06.png" href="#">
+              <a onclick="selectPic(6);" data-toggle="modal" data-target="#site-modal" data-highres="images/06.png" href="#">
                 <img class="layout-image img-thumbnail" src="images/06.png" alt="Monster Image 04">
               </a>
               <h3 class="pt-3">6</h3>
@@ -477,6 +477,25 @@
             <div class="row justify-content-center py-3">
               <div class="col-11 col-sm-10 col-md-8">
                 <h3 class="page-section-title">Cavity Wall Solution </h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('IB1')" href="javascript:void(0); #IB1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+
+        <section id="S3"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Solid Wall Solution </h3>
                 <p></p>
               </div>
             </div>
@@ -1213,10 +1232,24 @@
         <i class="layout-icon fab fa-linkedin"></i>
       </a>
 
+
     </section>
+
+
 
   </footer>
 
+  <section class="site-footer text-light d-flex justify-content-center">
+
+    <a class="text-light">
+
+      <p class="align-item-center" style="font-size:12px;">
+        <img src="images/TakeLogoTransparent.png" style="height:17px"></i>
+        Developed by TakeSoft
+      </p>
+    </a>
+
+  </section>
 
 
 </body>

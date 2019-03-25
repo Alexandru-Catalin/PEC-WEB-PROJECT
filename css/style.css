@@ -103,7 +103,7 @@ hr {
 }
 
 .layout-social .layout-icon {
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .hidden {
@@ -190,4 +190,5 @@ hr {
 
 #topBtn:hover {
   background-color: #555;
+  text-decoration: none;
 }

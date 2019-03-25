@@ -155,19 +155,19 @@ function calculateWall()
   if (wallPic == 2)
   {
     if (before1930 == true) {
-      nextSection('S99');
+      nextSection('S3');
     }
     if (after1930 == true) {
       nextSection('IA7');
     }
     if (noIdea == true) {
-      nextSection('S99');
+      nextSection('S3');
     }
 
     if (wallPic == 3)
     {
       if (before1930 == true) {
-        nextSection('S99');
+        nextSection('S3');
       }
       if (after1930 == true) {
         nextSection('IA7');
@@ -177,6 +177,62 @@ function calculateWall()
       }
 
   }
+
+  if (wallPic == 3)
+  {
+    if (before1930 == true) {
+      nextSection('S99');
+    }
+    if (after1930 == true) {
+      nextSection('S99');
+    }
+    if (noIdea == true) {
+      nextSection('S99');
+    }
+
+}
+
+if (wallPic == 4)
+{
+  if (before1930 == true) {
+    nextSection('S3');
+  }
+  if (after1930 == true) {
+    nextSection('S99');
+  }
+  if (noIdea == true) {
+    nextSection('S99');
+  }
+
+}
+
+if (wallPic == 5)
+{
+  if (before1930 == true) {
+    nextSection('S3');
+  }
+  if (after1930 == true) {
+    nextSection('S99');
+  }
+  if (noIdea == true) {
+    nextSection('S99');
+  }
+
+}
+
+if (wallPic == 6)
+{
+  if (before1930 == true) {
+    nextSection('S3');
+  }
+  if (after1930 == true) {
+    nextSection('S99');
+  }
+  if (noIdea == true) {
+    nextSection('S99');
+  }
+
+}
 }
 }
 
