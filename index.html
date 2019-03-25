@@ -20,7 +20,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-nav" data-offset="62">
-  <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+  <a href="#page-top" id="topBtn" title="Go to top">Top</a>
 
   <header id="page-top" class="site-header">
 
@@ -29,7 +29,7 @@
       <div class="container-fluid">
 
         <a class="navbar-brand" href="index.html">
-        <img src="https://www.plymouthenergycommunity.com/images/6.jpg" alt="Plymouth Energy Community"></a>
+        <img src="https://www.plymouthenergycommunity.com/images/6.jpg" alt="Plymouth Energy Community" style="height:30px"></a>
 
         <button type="button" class="navbar-toggler border-0" data-toggle="collapse" data-target="#myTogglerNav" aria-controls="#myTogglerNav"
           aria-label="Toggle Navigation">
@@ -41,9 +41,9 @@
           <div class="navbar-nav ml-auto">
             <a class="nav-item nav-link" href="#page-top">top</a><hr>
             <a class="nav-item nav-link" href="#page-start">get started</a><hr>
-            <!-- <a class="nav-item nav-link" href="#page-insulation">insulation</a>
-            <a class="nav-item nav-link" href="#page-heating">heating</a>
-            <a class="nav-item nav-link" href="#page-other">other improvements</a> -->
+            <a class="nav-item nav-link" href="#page-insulation" onclick="selectSection('page-insulation')" >insulation</a><hr>
+            <a class="nav-item nav-link" onclick="selectSection('page-heating')" href="#page-heating">heating</a><hr>
+            <a class="nav-item nav-link" onclick="selectSection('page-other')" href="#page-other">other improvements</a>
           </div>
         </section>
 
@@ -196,6 +196,9 @@
             </ul>
 
             <!-- The slideshow -->
+
+            <section  class="layout-hero bg-secondary  align-items-center text-light text-center py-5">
+              <div class="container">
             <div class="carousel-inner px-5" style="height:200px !important;">
               <div class="carousel-item active ">
                 <div class="row justify-content-center">
@@ -205,6 +208,7 @@
                   </div>
                 </div>
               </div>
+
 
               <div class="carousel-item ">
                 <div class="row justify-content-center">
@@ -250,6 +254,7 @@
               </div>
             </div>
 
+
             <!-- Left and right controls -->
             <a class="carousel-control-prev" href="#demo" data-slide="prev">
               <span class="carousel-control-prev-icon"></span>
@@ -257,13 +262,20 @@
             <a class="carousel-control-next" href="#demo" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
-
+          </div>
+        </div>
 
           </div>
-            <div class="text-light bg-secondary row justify-content-center py-3">
-              <a href="https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/"><u>https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/</u></a>
 
+          <section  class="layout-hero bg-secondary  align-items-center text-light text-center">
+            <div class="container">
+              <div class="row justify-content-center py-3">
+
+                  <a href="https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/"><u>https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/</u></a>
+
+              </div>
             </div>
+          </section>
 
       </div>
 
@@ -346,7 +358,7 @@
         <div class="container"><hr>
           <div class="row justify-content-center py-5">
             <div class="col-11 col-sm-10 col-md-8">
-              <h3 class="page-section-title">(No Idea)When was your house built?</h3>
+              <h3 class="page-section-title">When was your house built?</h3>
 
             </div>
           </div>
@@ -428,7 +440,7 @@
           <div class="container"><hr>
             <div class="row justify-content-center py-3">
               <div class="col-11 col-sm-10 col-md-8">
-                <h3 class="page-section-title">(Cavity Wall) Do you have any existing damp in your home?</h3>
+                <h3 class="page-section-title">Do you have any existing damp in your home?</h3>
 
               </div>
             </div>

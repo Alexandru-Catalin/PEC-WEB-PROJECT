@@ -239,6 +239,9 @@ $(function() {
       .find('a.active')
       .attr('href');
 
+      console.log(hash);
+      hash.replace("javascript:void(0); " ,"");
+
       if (hash !== '#page-top') {
         $('header nav').addClass('inbody');
       } else {
