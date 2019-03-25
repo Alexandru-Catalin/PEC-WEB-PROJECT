@@ -1,97 +1,4 @@
-$(function() {
-  var topoffset = 62;
 
-  //Use smooth scrolling when clicking on navigation
-  // $('.navbar a[href*=\\#]:not([href=\\#])').click(
-  //   function() {
-  //     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
-  //
-  //       var target = $(this.hash);
-  //       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-  //
-  //       if (target.length) {
-  //         $('html,body').animate(
-  //           {
-  //             scrollTop: target.offset().top - topoffset + 2
-  //           },
-  //           500
-  //         );
-  //         return false;
-  //       } //target.length
-  //     } //click function
-  //   }
-  // ); //smooth scrolling
-
-
-  $("a").on('click', function(event) {
-
-    //Ignore these hashes
-    if (this.hash != "#demo") {
-
-
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
-      // Store hash
-      var hash = this.hash;
-
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End
-  }
-  });
-
-
-  $(window).on('activate.bs.scrollspy', function() {
-    var hash = $('.site-nav')
-      .find('a.active')
-      .attr('href');
-
-      if (hash !== '#page-top') {
-        $('header nav').addClass('inbody');
-      } else {
-        $('header nav').removeClass('inbody');
-      }
-  });
-
-  $('#site-modal').on('show.bs.modal', function(event) {
-    $(this)
-      .find('.modal-content img')
-      .attr('src', $(event.relatedTarget).data('highres'));
-  });
-
-  // Closes responsive menu when a scroll trigger link is clicked
-    $('.navbar a').click(function() {
-      $('.navbar-collapse').collapse('hide');
-    });
-
-    $('#site-modal').on('show.bs.modal', function(event) {
-      $(this)
-        .find('.modal-content img')
-        .attr('src', $(event.relatedTarget).data('highres'));
-    });
-
-});
-
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-
-});
-
-
-// function nextSection(id) {
-//    var e = document.getElementById(id);
-//    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-// }
 var isI = false;
 var isH = false;
 var isO = false;
@@ -272,3 +179,88 @@ function calculateWall()
   }
 }
 }
+
+
+$(function() {
+  var topoffset = 62;
+
+  //Use smooth scrolling when clicking on navigation
+  // $('.navbar a[href*=\\#]:not([href=\\#])').click(
+  //   function() {
+  //     if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
+  //
+  //       var target = $(this.hash);
+  //       target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  //
+  //       if (target.length) {
+  //         $('html,body').animate(
+  //           {
+  //             scrollTop: target.offset().top - topoffset + 2
+  //           },
+  //           500
+  //         );
+  //         return false;
+  //       } //target.length
+  //     } //click function
+  //   }
+  // ); //smooth scrolling
+
+
+  $("a").on('click', function(event) {
+
+    //Ignore these hashes
+    if (this.hash != "#demo") {
+
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End
+  }
+  });
+
+
+  $(window).on('activate.bs.scrollspy', function() {
+    var hash = $('.site-nav')
+      .find('a.active')
+      .attr('href');
+
+      if (hash !== '#page-top') {
+        $('header nav').addClass('inbody');
+      } else {
+        $('header nav').removeClass('inbody');
+      }
+  });
+
+  $('#site-modal').on('show.bs.modal', function(event) {
+    $(this)
+      .find('.modal-content img')
+      .attr('src', $(event.relatedTarget).data('highres'));
+  });
+
+  // Closes responsive menu when a scroll trigger link is clicked
+    $('.navbar a').click(function() {
+      $('.navbar-collapse').collapse('hide');
+    });
+
+    $('#site-modal').on('show.bs.modal', function(event) {
+      $(this)
+        .find('.modal-content img')
+        .attr('src', $(event.relatedTarget).data('highres'));
+    });
+
+});
