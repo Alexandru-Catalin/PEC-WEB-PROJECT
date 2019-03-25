@@ -49,6 +49,10 @@
   font-family: var(--font-family-sans-serif);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family-text);
   color: var(--color-text);
@@ -182,7 +186,7 @@ hr {
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 100px;
+  border-radius: 10px;
 }
 
 #topBtn:hover {

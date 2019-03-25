@@ -93,7 +93,7 @@
                   <p class="layout-text card-text">Learn how insulation improves your bills!</p>
                 </div>
 
-                <a onclick="selectSection('page-insulation')" href="javascript:void(0);" class="card-button text-center m-3 py-2" >Get Started!</a>
+                <a onclick="selectSection('page-insulation')" href="javascript:void(0); #page-insulation" class="card-button text-center m-3 py-2" >Get Started!</a>
 
               </section>
 
@@ -151,7 +151,7 @@
       </header>
 
 
-
+      <!-- Wall Insulation -->
       <div id="IA2" style="display:block;">
         <section  class="layout-hero bg-secondary  align-items-center text-light text-center py-5">
           <div class="container">
@@ -160,8 +160,8 @@
                 <h3 class="page-section-title">Does your house have wall insulation?</h3>
               </div>
             </div>
-            <a onclick="nextSection('IB1')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">Yes</a>
-            <a onclick="nextSection('IA3')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">No</a>
+            <a onclick="nextSection('IB1')" href="javascript:void(0); #IB1" class="button text-center m-3 px-5 py-2">Yes</a>
+            <a onclick="nextSection('IA3')" href="javascript:void(0); #IA3" class="button text-center m-3 px-5 py-2">No</a>
           </div>
         </section>
 
@@ -213,10 +213,14 @@
             <a class="carousel-control-next" href="#demo" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
-            <p>https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/</p>
 
 
           </div>
+            <div class="text-light bg-secondary row justify-content-center py-3">
+              <a href="https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/"><u>https://www.insulatekansascity.com/insulation-blog/9-signs-your-home-is-under-insulated/</u></a>
+
+            </div>
+
       </div>
 
 
@@ -234,13 +238,13 @@
             <div class="row justify-content-center py-3">
 
 
-            <a onclick="nextSection('IA7')" href="javascript:void(0);" class="text-nowrap button text-center m-3 px-5 py-2">With Cavity</a>
+            <a onclick="nextSection('IA7')" href="javascript:void(0); #IA7" class="text-nowrap button text-center m-3 px-5 py-2">With Cavity</a>
 
-            <a onclick="nextSection('')" href="javascript:void(0);" class="text-nowrap button text-center m-3 px-5 py-2">Solid</a>
+            <a onclick="nextSection('S3')" href="javascript:void(0); #S3" class="text-nowrap button text-center m-3 px-5 py-2">Solid</a>
 
-            <a onclick="nextSection('S100')" href="javascript:void(0);" class="text-nowrap button text-center m-3 px-5 py-2">Non Standard Construction</a>
+            <a onclick="nextSection('S100')" href="javascript:void(0); #S100" class="text-nowrap button text-center m-3 px-5 py-2">Non Standard Construction</a>
 
-            <a onclick="nextSection('IA4')" href="javascript:void(0);" class="text-nowrap button text-center m-3 px-5 py-2">I have no idea</a>
+            <a onclick="nextSection('IA4')" href="javascript:void(0); #IA4" class="text-nowrap button text-center m-3 px-5 py-2">I have no idea</a>
           </div>
           </div>
 
@@ -287,8 +291,7 @@
               </div>
 
             </div>
-
-            <p>https://www.thegreenage.co.uk/difference-cavity-wall-insulation-solid-wall-insulation/</p>
+            <a href="https://www.thegreenage.co.uk/difference-cavity-wall-insulation-solid-wall-insulation/"><u>https://www.thegreenage.co.uk/difference-cavity-wall-insulation-solid-wall-insulation/</u></a>
           </article>
       </div>
 
@@ -297,15 +300,15 @@
 
       <section id="IA4"  style="display:none;" class="layout-hero bg-secondary  align-items-center text-light text-center py-5 w3-animate-opacity">
         <div class="container"><hr>
-          <div class="row justify-content-center py-3">
+          <div class="row justify-content-center py-5">
             <div class="col-11 col-sm-10 col-md-8">
               <h3 class="page-section-title">(No Idea)When was your house built?</h3>
 
             </div>
           </div>
-          <a onclick="nextSection('IA5'); workoutWall(1);" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">Before 1930</a>
-          <a onclick="nextSection('IA5'); workoutWall(2);" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">After 1930</a>
-          <a onclick="nextSection('IA5'); workoutWall(3);" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">I don't know</a>
+          <a onclick="nextSection('IA5'); workoutWall(1);" href="javascript:void(0); #IA5" class="button text-center m-3 px-5 py-2">Before 1930</a>
+          <a onclick="nextSection('IA5'); workoutWall(2);" href="javascript:void(0); #IA5" class="button text-center m-3 px-5 py-2">After 1930</a>
+          <a onclick="nextSection('IA5'); workoutWall(3);" href="javascript:void(0); #IA5" class="button text-center m-3 px-5 py-2">I don't know</a>
         </div>
       </section>
 
@@ -366,7 +369,7 @@
               <h3 class="pt-3">6</h3>
             </section>
 
-            <a onclick="nextSection('S100')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">None of the Above / Still not sure</a>
+            <a onclick="nextSection('S99')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">None of the Above / Still not sure</a>
 
 
 
@@ -383,77 +386,51 @@
 
               </div>
             </div>
-            <a onclick="nextSection('')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">Yes</a>
-            <a onclick="nextSection('')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2">No</a>
+            <a onclick="nextSection('S1')" href="javascript:void(0); #S1" class="button text-center m-3 px-5 py-2">Yes</a>
+            <a onclick="nextSection('S2')" href="javascript:void(0); #S2" class="button text-center m-3 px-5 py-2">No</a>
           </div>
         </section>
 
-        <section  id="IB1"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+
+        <!-- Wall Insulation Solutions -->
+
+        <section id="S1"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
           <div class="container">
             <div class="row justify-content-center py-3">
               <div class="col-11 col-sm-10 col-md-8">
-                <h3 class="page-section-title">Does your house have a loft, or do you have bedrooms in the attic?</h3>
-
+                <h3 class="page-section-title">Cavity Wall and Damp Solution </h3>
+                <p></p>
               </div>
             </div>
-            <a onclick="nextSection('IB2')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">Loft</a>
-            <a onclick="nextSection('IC1')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">Room in Roof</a>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('IB1')" href="javascript:void(0); #IB1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
           </div>
         </section>
 
-        <section  id="IB2"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+        <section id="S2"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
           <div class="container">
             <div class="row justify-content-center py-3">
               <div class="col-11 col-sm-10 col-md-8">
-                <h3 class="page-section-title">Does your loft have less than 125mm (5") loft insulation. (5" would only just come up over the height of the joists).</h3>
-
+                <h3 class="page-section-title">Cavity Wall Solution </h3>
+                <p></p>
               </div>
             </div>
-            <a onclick="nextSection('S4')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-            <a onclick="nextSection('IB3')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">No</a>
-          </div>
-        </section>
 
-        <section id="IB3"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
-          <div class="container">
             <div class="row justify-content-center py-3">
-              <div class="col-11 col-sm-10 col-md-8">
-                <h3 class="page-section-title">Does your loft have less than 270mm (11") of insulation?</h3>
 
-              </div>
-            </div>
-            <a onclick="nextSection('S5')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-            <a onclick="nextSection('S6')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+
+            <a onclick="nextSection('IB1')" href="javascript:void(0); #IB1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
           </div>
         </section>
 
-        <section id="IC1"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
-          <div class="container">
-            <div class="row justify-content-center py-3">
-              <div class="col-11 col-sm-10 col-md-8">
-                <h3 class="page-section-title">Was your loft converted or property built before 2003?</h3>
-
-              </div>
-            </div>
-            <a onclick="nextSection('S7')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
-            <a onclick="nextSection('S8')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">No</a>
-          </div>
-        </section>
-
-        <section id="ID1"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
-          <div class="container">
-            <div class="row justify-content-center py-3">
-              <div class="col-11 col-sm-10 col-md-8">
-                <h3 class="page-section-title">Is your ground floor solid or do you have floorboards?</h3>
-              </div>
-            </div>
-            <a onclick="nextSection('S9')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">Floorboards</a>
-            <a onclick="nextSection('S10')" href="javascript:void(0);" class="button text-center m-3 px-5 py-2" href="#page-heating">Solid Floor</a>
-          </div>
-        </section>
-
-
-        <section id="S100"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+        <section id="S99"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
           <div class="container">
             <div class="row justify-content-center py-3">
               <div class="col-11 col-sm-10 col-md-8">
@@ -461,6 +438,211 @@
                 <p>Call us on 01752 477 117 or email us at support@plymouthenergycommunity.com</p>
               </div>
             </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('IB1')" href="javascript:void(0); #IB1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+
+        <!-- Loft Insulation Questions -->
+        <section  id="IB1"  style="display:none;" class="layout-hero bg-secondary align-items-center text-light text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Does your house have a loft, or do you have bedrooms in the attic?</h3>
+
+              </div>
+            </div>
+            <a onclick="nextSection('IB2')" href="javascript:void(0); #IB2" class="button text-center m-3 px-5 py-2" href="#page-heating">Loft</a>
+            <a onclick="nextSection('IC1')" href="javascript:void(0); #IC1" class="button text-center m-3 px-5 py-2" href="#page-heating">Room in Roof</a>
+          </div>
+        </section>
+
+        <section  id="IB2"  style="display:none;" class="layout-hero bg-secondary align-items-center text-light text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Does your loft have less than 125mm (5") loft insulation. (5" would only just come up over the height of the joists).</h3>
+
+              </div>
+            </div>
+            <a onclick="nextSection('S4')" href="javascript:void(0); #S4" class="button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
+            <a onclick="nextSection('IB3')" href="javascript:void(0); #IB3" class="button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          </div>
+        </section>
+
+        <section id="IB3"  style="display:none;" class="layout-hero bg-secondary align-items-center text-light text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Does your loft have less than 270mm (11") of insulation?</h3>
+
+              </div>
+            </div>
+            <a onclick="nextSection('S5')" href="javascript:void(0); #S5" class="button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
+            <a onclick="nextSection('S6')" href="javascript:void(0); #S6" class="button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          </div>
+        </section>
+
+        <section id="IC1"  style="display:none;" class="layout-hero bg-secondary align-items-center text-light text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Was your loft converted or property built before 2003?</h3>
+
+              </div>
+            </div>
+            <a onclick="nextSection('S7')" href="javascript:void(0); #S7" class="button text-center m-3 px-5 py-2" href="#page-heating">Yes</a>
+            <a onclick="nextSection('S8')" href="javascript:void(0); #S8" class="button text-center m-3 px-5 py-2" href="#page-heating">No</a>
+          </div>
+        </section>
+
+
+        <!-- Loft Insulation Solutions -->
+
+        <section id="S4"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Loft Insulation Guidance</h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('ID1')" href="javascript:void(0); #ID1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+        <section id="S5"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Your loft is partially insulated.</h3>
+                <p>It is not a high priority to top up your insulation but if you are planning any work in the loft, top it up to at least 300mm</p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('ID1')" href="javascript:void(0); #ID1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+        <section id="S6"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Your loft is fully Insulated</h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('ID1')" href="javascript:void(0); #ID1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+        <section id="S7"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Room in Roof insulation Information</h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('ID1')" href="javascript:void(0); #ID1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+        <section id="S8"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Building Regualtions mean that the rooms in your attic should be well insulated</h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="nextSection('ID1')" href="javascript:void(0); #ID1" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+
+        <!-- Floor Insulation -->
+        <section id="ID1"  style="display:none;" class="layout-hero bg-secondary align-items-center text-light text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Is your ground floor solid or do you have floorboards?</h3>
+              </div>
+            </div>
+            <a onclick="nextSection('S9')" href="javascript:void(0); #S9" class="button text-center m-3 px-5 py-2">Floorboards</a>
+            <a onclick="nextSection('S10')" href="javascript:void(0); #S10" class="button text-center m-3 px-5 py-2">Solid Floor</a>
+          </div>
+        </section>
+
+
+        <!-- Floor Insulation Solutions -->
+        <section id="S9"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Floorboard Solution</h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="selectSection('page-heating')" href="javascript:void(0); #page-heating" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
+
+          </div>
+        </section>
+
+        <section id="S10"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+          <div class="container">
+            <div class="row justify-content-center py-3">
+              <div class="col-11 col-sm-10 col-md-8">
+                <h3 class="page-section-title">Solid Floor Solution</h3>
+                <p></p>
+              </div>
+            </div>
+
+            <div class="row justify-content-center py-3">
+
+
+            <a onclick="selectSection('page-heating')" href="javascript:void(0); #page-heating" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+
 
           </div>
         </section>
