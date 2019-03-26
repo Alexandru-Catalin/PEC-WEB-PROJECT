@@ -163,6 +163,7 @@ function calculateWall()
     if (noIdea == true) {
       nextSection('S3');
     }
+  }
 
     if (wallPic == 3)
     {
@@ -234,7 +235,7 @@ if (wallPic == 6)
 
 }
 }
-}
+
 
 
 $(function() {

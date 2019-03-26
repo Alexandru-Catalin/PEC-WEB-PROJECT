@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300|Source+Sans+Pro:200,400,600');
+@import url('https://www.youworkforthem.com/font/T2033/creighton');
 
 :root {
   /*
@@ -40,23 +41,45 @@
   --primary: #28235d;
 
   /* Page Variables */
-  --font-family-serif: Merriweather, serif;
+  --font-family-serif: Creighton, serif;
   --color-text: var(--gray-dark);
   --font-family-text: var(--font-family-serif);
 }
 
-.family-sans {
-  font-family: var(--font-family-sans-serif);
+@font-face {
+	font-family: 'Creighton';
+	src: url('creighton.eot');
+	src: url('creighton.eot?#iefix') format('embedded-opentype'),
+             url('creighton.woff2') format('woff2'),
+	     url('creighton.woff') format('woff'),
+	     url('creighton.ttf') format('truetype'),
+	     url('creighton.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
+
+
+div {
+  font-family: 'Creighton';
+    font-size: 1.15em;
+}
+
+.family-sans {
+  font-family: 'Creighton';
+}
+
+
 
 html {
   /* scroll-behavior: smooth; */
 }
 
 body {
-  font-family: var(--font-family-text);
+  font-family: 'Creighton';
   color: var(--color-text);
-  font-weight: 200;
+  font-weight: normal;
+  font-size: 6em;
+  font-style: normal;
 }
 
 hr {
@@ -70,6 +93,37 @@ hr {
 @media screen and (max-width 768px){
   .site-header .navbar-collapse{
 
+  }
+}
+
+#page-floater {
+  background: radial-gradient(
+    ellipse at left,
+    var(--gray) 0,
+    var(--gray-dark) 100%
+  );
+  padding: 0em 0;
+}
+
+/* Layout Float */
+
+@media screen and (min-width: 992px) {
+  #page-floater {
+    margin: 50px 0 150px 0;
+  }
+
+  #page-floater .img-container {
+    position: relative;
+  }
+
+  #page-floater .layout-image {
+    position: absolute;
+  }
+
+  #page-floater img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
   }
 }
 
@@ -90,7 +144,7 @@ hr {
 
 .site-header .page-section-title {
   font-size: 3em;
-  font-family: var(--font-family-sans-serif);
+  font-family: 'Creighton';
   font-weight: 200;
 }
 
@@ -103,7 +157,7 @@ hr {
 }
 
 .layout-social .layout-icon {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .hidden {
