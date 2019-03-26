@@ -64,6 +64,10 @@ div {
     font-size: 1.15em;
 }
 
+p {
+  font-size: 1em;
+}
+
 .family-sans {
   font-family: 'Creighton';
 }
@@ -150,6 +154,11 @@ hr {
 
 .site-header .page-section-text {
   font-size: 1.2em;
+}
+
+.carousel-font-size
+{
+  font-size: 1em;
 }
 
 .site-footer {
