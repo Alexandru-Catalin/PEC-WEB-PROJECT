@@ -319,26 +319,26 @@ $(document).ready(function(){
 
   //On card hover, do animation on icon
   $('#card1 a').hover(function(){
-    $('#card1').find('i').addClass('pulse');
+    $('#card1').find('i').addClass('w3-spin');
   },
   function(){
-    $('#card1').find('i').removeClass('pulse');
+    $('#card1').find('i').removeClass('w3-spin');
 });
 
 //On card hover, do animation on icon
 $('#card2 a').hover(function(){
-$('#card2').find('i').addClass('w3-spin');
+$('#card2').find('i').addClass('pulse');
 },
 function(){
-  $('#card2').find('i').removeClass('w3-spin');
+  $('#card2').find('i').removeClass('pulse');
 });
 
 //On card hover, do animation on icon
 $('#card3 a').hover(function(){
-  $('#card3').find('i').addClass('w3-spin');
+  $('#card3').find('i').addClass('pulse');
 },
 function(){
-  $('#card3').find('i').removeClass('w3-spin');
+  $('#card3').find('i').removeClass('pulse');
 });
 });
 
