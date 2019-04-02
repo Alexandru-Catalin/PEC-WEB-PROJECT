@@ -24,7 +24,7 @@
 <body data-spy="scroll" data-target=".site-nav" data-offset="62">
   <a href="#page-top" id="topBtn" title="Go to top">Top</a>
 
-  <header id="page-top" class="site-header">
+  <header id="page-top">
 
     <nav class="site-nav family-sans text-uppercase navbar navbar-expand-md navbar-dark fixed-top">
 
@@ -41,7 +41,7 @@
 
         <section class="collapse navbar-collapse" id="myTogglerNav">
           <div class="navbar-nav ml-auto">
-            <a class="nav-item nav-link" href="#page-top">top</a><hr>
+            <!-- <a class="nav-item nav-link" href="#page-top">top</a><hr> -->
             <a class="nav-item nav-link" href="#page-start">get started</a><hr>
             <a class="nav-item nav-link" href="#page-insulation" onclick="selectSection('page-insulation')" >insulation</a><hr>
             <a class="nav-item nav-link" onclick="selectSection('page-heating')" href="#page-heating">heating</a><hr>
@@ -54,17 +54,7 @@
     </nav>
 
     <!-- Site Header -->
-    <section class="layout-hero d-flex align-items-center text-light text-center mt-5 ">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-11 col-sm-10 col-md-8 animated fadeInUp">
-            <h3 class="page-section-title">Reducing Your Bills</h3>
-            <p class="page-section-text">This site will teach about reducing your bills.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+
 
   </header>
 
@@ -125,7 +115,6 @@
               				<br><label for="email">Email Address</label><br>
               				<input type="text" id="email" name="email" placeholder="Your email address..">
 
-
               				<br><label for="msage">Message</label>
               				<textarea id="msage" name="message" rows="10" cols="30" placeholder="Your message here.."></textarea>
 
@@ -155,6 +144,18 @@
     <!-- Choose path -->
     <article id="page-start" class="page-section bg-secondary py-5">
 
+      <section id="header" class="site-header layout-hero d-flex align-items-center text-light text-center ">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-11 col-sm-10 col-md-8 animated fadeInUp">
+              <h3 class="page-section-title">Reducing Your Bills</h3>
+              <p class="page-section-text">This site will teach about reducing your bills.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <header class="page-section-header container text-light text-center py-5">
         <div class="row justify-content-center">
           <div class="col-11 col-sm-10 col-md-8">
@@ -171,36 +172,36 @@
 
             <div class="w3-animate-zoom card-deck">
 
-              <section class=" card mb-5 ">
+              <section id="card1" class=" card mb-5 ">
                 <i class="card-icon card-img-top img-fluid d-flex justify-content-center fas fa-home py-3"></i>
                 <div class="card-body">
                   <h4 class="layout-title card-title">Insulating My Home</h4>
                   <p class="layout-text card-text">Learn how insulation improves your bills!</p>
                 </div>
 
-                <a onclick="selectSection('page-insulation');" href="javascript:void(0); #page-insulation" class="card-button text-center m-3 py-2" >Get Started!</a>
+                <a onclick="selectSection('page-insulation'); hideSection('page-start');" href="javascript:void(0); #page-insulation" class="card-button text-center stretched-link m-3 py-2" >Get Started!</a>
 
               </section>
 
-              <section class="card mb-5">
+              <section id="card2" class="card mb-5">
                 <i class="card-icon card-img-top img-fluid d-flex justify-content-center fas fa-burn py-3"></i>
                 <div class="card-body">
                   <h4 class="layout-title card-title">Improve My Heating</h4>
                   <p class="layout-text card-text">Learn how heating affect your bills!</p>
                 </div>
 
-                <a onclick="selectSection('page-heating')" href="javascript:void(0); #page-heating" class="card-button text-center m-3 py-2">Get Started!</a>
+                <a onclick="selectSection('page-heating')" href="javascript:void(0); #page-heating" class="card-button text-center stretched-link m-3 py-2">Get Started!</a>
 
               </section>
 
 
-              <section class="card mb-5">
+              <section id="card3" class="card mb-5">
                 <i class="card-icon card-img-top img-fluid d-flex justify-content-center far fa-lightbulb py-3"></i>
                 <div class="card-body">
                   <h4 class="layout-title card-title">Other Home Improvements</h4>
                   <p class="layout-text card-text">Other ways you can reduce your bills!</p>
                 </div>
-                <a onclick="selectSection('page-other')" href="javascript:void(0); #page-other" class="card-button text-center m-3 py-2">Get Started!</a>
+                <a onclick="selectSection('page-other')" href="javascript:void(0); #page-other" class="card-button text-center stretched-link m-3 py-2">Get Started!</a>
               </section>
 
             </div>
@@ -237,7 +238,7 @@
     <!--Insulation-->
     <article id="page-insulation" style="display:none;" class="page-section text-center fadeInUp">
 
-      <header class="page-section-header container py-5">
+      <header class="page-section-header container py-5 mt-5">
         <div class="row justify-content-center">
           <div class="col-11 col-sm-10 col-md-8">
             <h2 class="page-section-title">Insulating My Home</h2>

@@ -7,16 +7,7 @@ var nexSection = '';
 
 var solutionsNeeded = [];
 
-$(document).ready(function(){
-  $(".fadeout").click(function(){
-    console.log(currentSection);
-    $('#' + currentSection).fadeOut()
-  });
-  $(".fadein").click(function(){
-    console.log(currentSection);
-    $('#' + currentSection + 'A').fadeIn();
-  });
-});
+
 
 function nextSection(id) {
   if (nexSection != '')
@@ -312,7 +303,44 @@ function OnLoadPrint()
 
 
 
+$(document).ready(function(){
+  $(".fadeout").click(function(){
+    console.log(currentSection);
+    $('#' + currentSection).fadeOut()
+  });
+  $(".fadein").click(function(){
+    console.log(currentSection);
+    $('#' + currentSection + 'A').fadeIn();
+  });
+  $(".shrink").click(function(){
+    console.log(currentSection);
+    $('#' + currentSection + 'A').fadeIn();
+  });
 
+  //On card hover, do animation on icon
+  $('#card1 a').hover(function(){
+    $('#card1').find('i').addClass('pulse');
+  },
+  function(){
+    $('#card1').find('i').removeClass('pulse');
+});
+
+//On card hover, do animation on icon
+$('#card2 a').hover(function(){
+$('#card2').find('i').addClass('w3-spin');
+},
+function(){
+  $('#card2').find('i').removeClass('w3-spin');
+});
+
+//On card hover, do animation on icon
+$('#card3 a').hover(function(){
+  $('#card3').find('i').addClass('w3-spin');
+},
+function(){
+  $('#card3').find('i').removeClass('w3-spin');
+});
+});
 
 
 
