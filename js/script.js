@@ -319,10 +319,10 @@ $(document).ready(function(){
 
   //On card hover, do animation on icon
   $('#card1 a').hover(function(){
-    $('#card1').find('i').addClass('w3-spin');
+    $('#card1').find('i').addClass('w3-spin text-success');
   },
   function(){
-    $('#card1').find('i').removeClass('w3-spin');
+    $('#card1').find('i').removeClass('w3-spin text-success');
 });
 
 //On card hover, do animation on icon
@@ -335,10 +335,10 @@ function(){
 
 //On card hover, do animation on icon
 $('#card3 a').hover(function(){
-  $('#card3').find('i').addClass('pulse');
+  $('#card3').find('i').addClass('lightbulb');
 },
 function(){
-  $('#card3').find('i').removeClass('pulse');
+  $('#card3').find('i').removeClass('lightbulb');
 });
 });
 
