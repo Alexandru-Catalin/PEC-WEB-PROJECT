@@ -2,27 +2,44 @@
 var isI = false;
 var isH = false;
 var isO = false;
+var currentSection = '';
+var nexSection = '';
 
+var solutionsNeeded = [];
 
+$(document).ready(function(){
+  $(".fadeout").click(function(){
+    console.log(currentSection);
+    $('#' + currentSection).fadeOut()
+  });
+  $(".fadein").click(function(){
+    console.log(currentSection);
+    $('#' + currentSection + 'A').fadeIn();
+  });
+});
 
 function nextSection(id) {
-
+  if (nexSection != '')
+    currentSection = nexSection;
    var e = document.getElementById(id);
    e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+   nexSection = id;
 
+}
+
+function hideSection(id)
+{
+  var e = document.getElementById(id);
+  e.style.display = 'none';
 }
 
 function selectSection(id) {
 
-  //if (isI == true || isH == true || isO == true)
-  {
 
-  }
-  //else
-    {
       if (id == 'page-insulation' && isI == false)
       {
         isI = true;
+        currentSection = 'IA2';
         var e = document.getElementById('page-insulation');
         e.style.display = 'block';
         hideSections(1);
@@ -52,39 +69,48 @@ function selectSection(id) {
         isH = false;
         isO = false;
       }
-
-      function hideSections(i)
-      {
-        if (i == 1){
-
-        isH = false;
-        var e = document.getElementById('page-heating');
-        e.style.display = 'none';
-        isO = false;
-        var e = document.getElementById('page-other');
-        e.style.display = 'none';
-      }
-      if (i == 2){
-        isO = false;
-        var e = document.getElementById('page-other');
-        e.style.display = 'none';
-        isI = false;
-        var e = document.getElementById('page-insulation');
-        e.style.display = 'none';
-      }
-        if (i == 3){
-        isI = false;
-        var e = document.getElementById('page-insulation');
-        e.style.display = 'none';
-        isH = false;
-        var e = document.getElementById('page-heating');
-        e.style.display = 'none';
-      }
-      }
-
-    }
   }
 
+  function hideSections(i)
+  {
+    if (i == 1){
+
+    isH = false;
+    var e = document.getElementById('page-heating');
+    e.style.display = 'none';
+    isO = false;
+    var e = document.getElementById('page-other');
+    e.style.display = 'none';
+  }
+  if (i == 2){
+    isO = false;
+    var e = document.getElementById('page-other');
+    e.style.display = 'none';
+    isI = false;
+    var e = document.getElementById('page-insulation');
+    e.style.display = 'none';
+  }
+    if (i == 3){
+    isI = false;
+    var e = document.getElementById('page-insulation');
+    e.style.display = 'none';
+    isH = false;
+    var e = document.getElementById('page-heating');
+    e.style.display = 'none';
+  }
+  else if (i == 0)
+  {
+    isI = false;
+    var e = document.getElementById('page-insulation');
+    e.style.display = 'none';
+    isH = false;
+    var e = document.getElementById('page-heating');
+    e.style.display = 'none';
+    isO = false;
+    var e = document.getElementById('page-other');
+    e.style.display = 'none';
+  }
+  }
 
   // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
@@ -236,6 +262,58 @@ if (wallPic == 6)
 }
 }
 
+var index = 0;
+
+function addSolution(id)
+{
+  console.log(id);
+  solutionsNeeded.push(id);
+  console.log(solutionsNeeded[index]);
+  index++;
+}
+
+function displaySummary()
+{
+  for (var i = 0; i < solutionsNeeded.length; ++i)
+  {
+    var solution = searchSolution(solutionsNeeded[i]);
+    document.getElementById('summary').innerHTML += solution.title + "<br>";
+      document.getElementById('summary').innerHTML += solution.text + "<br><br><br>";
+  }
+
+  localStorage.setItem("solutions", solutionsNeeded);
+
+
+
+}
+
+function searchSolution(id)
+{
+  var temp;
+  for (var i = 0; i < solutions.length; ++i)
+  {
+        if (id == solutions[i].id)
+        {
+          return solutions[i];
+        }
+  }
+}
+
+function OnLoadPrint()
+{
+  var solutions = localStorage.getItem("solutions");
+  for (var i = 0; i < solutions.length; ++i)
+  {
+    var solution = searchSolution(solutions[i]);
+    document.getElementById('printSummary').innerHTML += solution.title + "<br>";
+      document.getElementById('printSummary').innerHTML += solution.text + "<br><br><br>";
+  }
+}
+
+
+
+
+
 
 
 $(function() {
@@ -281,7 +359,7 @@ $(function() {
       // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
         scrollTop: $(hash).offset().top
-      }, 1000, function(){
+      }, 800, function(){
 
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
