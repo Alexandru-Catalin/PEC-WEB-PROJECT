@@ -430,3 +430,27 @@ $(function() {
     });
 
 });
+var isNavOpen = false;
+
+/* Open */
+function openNav() {
+  if (isNavOpen == false)
+  {
+    document.getElementById("myNav").style.height = "100%";
+    isNavOpen = true;
+  }
+
+  else if (isNavOpen == true)
+  {
+    document.getElementById("myNav").style.height = "0%";
+    isNavOpen = false;
+  }
+
+}
+
+/* Close */
+function closeNav() {
+  document.getElementById("myNav").style.height = "0%";
+  isNavOpen = false;
+
+}

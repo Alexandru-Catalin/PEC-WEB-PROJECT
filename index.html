@@ -22,6 +22,23 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-nav" data-offset="62">
+
+  <div id="myNav" class="overlay">
+
+    <!-- Button to close the overlay navigation -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <!-- Overlay content -->
+    <div class="overlay-content">
+      <a class="nav-item nav-link" href="#page-start" onclick="closeNav()">Get Started</a>
+      <a class="nav-item nav-link" href="#page-insulation" onclick="selectSection('page-insulation'); closeNav()" >Insulation</a>
+      <a class="nav-item nav-link" onclick="selectSection('page-heating'); closeNav()" href="#page-heating">Heating</a>
+      <a class="nav-item nav-link" onclick="selectSection('page-other'); closeNav()" href="#page-other">Other Improvements</a>
+    </div>
+
+  </div>
+
+
   <a href="#page-top" id="topBtn" title="Go to top">Top</a>
 
   <header id="page-top">
@@ -39,16 +56,21 @@
           <img src="https://www.plymouthenergycommunity.com/images/18.jpg" width="36" height="23" alt="">
         </button>
 
-        <section class="collapse navbar-collapse" id="myTogglerNav">
+        <span id="navBtn" class="text-light" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+        <!-- <section class="collapse navbar-collapse" id="myTogglerNav">
           <div class="navbar-nav ml-auto">
-            <!-- <a class="nav-item nav-link" href="#page-top">top</a><hr> -->
+
             <a class="nav-item nav-link" href="#page-start">get started</a><hr>
             <a class="nav-item nav-link" href="#page-insulation" onclick="selectSection('page-insulation')" >insulation</a><hr>
             <a class="nav-item nav-link" onclick="selectSection('page-heating')" href="#page-heating">heating</a><hr>
             <a class="nav-item nav-link" onclick="selectSection('page-other')" href="#page-other">other improvements</a>
           </div>
-        </section>
+        </section> -->
+        <!-- The overlay -->
 
+
+        <!-- Use any element to open/show the overlay navigation menu -->
       </div>
 
     </nav>
