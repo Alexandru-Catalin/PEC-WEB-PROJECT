@@ -437,12 +437,15 @@ function openNav() {
   if (isNavOpen == false)
   {
     document.getElementById("myNav").style.height = "100%";
+    document.getElementById("navBtn").classList.add("hamburgerOpen");
+
     isNavOpen = true;
   }
 
   else if (isNavOpen == true)
   {
     document.getElementById("myNav").style.height = "0%";
+    document.getElementById("navBtn").classList.remove("hamburgerOpen");
     isNavOpen = false;
   }
 
