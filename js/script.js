@@ -30,7 +30,7 @@ function selectSection(id) {
       if (id == 'page-insulation' && isI == false)
       {
         isI = true;
-        currentSection = 'IA1';
+        currentSection = 'IA2';
         var e = document.getElementById('page-insulation');
         e.style.display = 'block';
         hideSections(1);
@@ -308,21 +308,21 @@ $(document).ready(function(){
     console.log(currentSection);
     $('#' + currentSection).fadeOut()
   });
-  // $(".fadein").click(function(){
-  //   console.log(currentSection);
-  //   $('#' + currentSection + 'A').fadeIn();
-  // });
-  // $(".shrink").click(function(){
-  //   console.log(currentSection);
-  //   $('#' + currentSection + 'A').fadeIn();
-  // });
+  $(".fadein").click(function(){
+    console.log(currentSection);
+    $('#' + currentSection + 'A').fadeIn();
+  });
+  $(".shrink").click(function(){
+    console.log(currentSection);
+    $('#' + currentSection + 'A').fadeIn();
+  });
 
   //On card hover, do animation on icon
   $('#card1 a').hover(function(){
-    $('#card1').find('i').addClass('house');
+    $('#card1').find('i').addClass('w3-spin text-success');
   },
   function(){
-    $('#card1').find('i').removeClass('house');
+    $('#card1').find('i').removeClass('w3-spin text-success');
 });
 
 //On card hover, do animation on icon
