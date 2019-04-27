@@ -304,18 +304,18 @@ function OnLoadPrint()
 
 
 $(document).ready(function(){
-  $(".fadeout").click(function(){
-    console.log(currentSection);
-    $('#' + currentSection).fadeOut()
-  });
-  $(".fadein").click(function(){
-    console.log(currentSection);
-    $('#' + currentSection + 'A').fadeIn();
-  });
-  $(".shrink").click(function(){
-    console.log(currentSection);
-    $('#' + currentSection + 'A').fadeIn();
-  });
+  // $(".fadeout").click(function(){
+  //   console.log(currentSection);
+  //   $('#' + currentSection).fadeOut()
+  // });
+  // $(".fadein").click(function(){
+  //   console.log(currentSection);
+  //   $('#' + currentSection + 'A').fadeIn();
+  // });
+  // $(".shrink").click(function(){
+  //   console.log(currentSection);
+  //   $('#' + currentSection + 'A').fadeIn();
+  // });
 
   //On card hover, do animation on icon
   $('#card1 a').hover(function(){

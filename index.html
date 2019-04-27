@@ -214,7 +214,7 @@
                   <p class="layout-text card-text">Learn how heating affect your bills!</p>
                 </div>
 
-                <a onclick="selectSection('page-heating')" href="javascript:void(0); #page-heating" class="card-button text-center stretched-link m-3 py-2">Get Started!</a>
+                <a onclick="selectSection('page-heating'); hideSection('page-start');" href="javascript:void(0); #page-heating" class="card-button text-center stretched-link m-3 py-2">Get Started!</a>
 
               </section>
 
@@ -225,7 +225,7 @@
                   <h4 class="layout-title card-title">Other Home Improvements</h4>
                   <p class="layout-text card-text">Other ways you can reduce your bills!</p>
                 </div>
-                <a onclick="selectSection('page-other')" href="javascript:void(0); #page-other" class="card-button text-center stretched-link m-3 py-2">Get Started!</a>
+                <a onclick="selectSection('page-other'); hideSection('page-start');" href="javascript:void(0); #page-other" class="card-button text-center stretched-link m-3 py-2">Get Started!</a>
               </section>
 
             </div>
@@ -306,7 +306,7 @@
             <div class="row justify-content-center py-3">
 
             <a onclick="nextSection('IB1'); addSolution('S91')" href="javascript:void(0); #IB1" class="button text-center m-3 px-5 py-2 fadeout fadein">Yes</a>
-            <a onclick="nextSection('IA3')" href="javascript:void(0); " class="button text-center m-3 px-5 py-2 fadeout fadein">No</a>
+            <a onclick="nextSection('IA3')" href="javascript:void(0); #IA3 " class="button text-center m-3 px-5 py-2 fadeout fadein">No</a>
           </div>
           </div>
         </section>
@@ -422,13 +422,13 @@
             <div class="row justify-content-center py-3">
 
 
-            <a onclick="nextSection('IA7')" href="javascript:void(0); " class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">With Cavity</a>
+            <a onclick="nextSection('IA7')" href="javascript:void(0); #IA7" class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">With Cavity</a>
 
-            <a onclick="nextSection('S3')" href="javascript:void(0); " class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">Solid</a>
+            <a onclick="nextSection('S3')" href="javascript:void(0); #S3" class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">Solid</a>
 
-            <a onclick="nextSection('S99')" href="javascript:void(0); " class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">Non Standard Construction</a>
+            <a onclick="nextSection('S99')" href="javascript:void(0); #S99" class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">Non Standard Construction</a>
 
-            <a onclick="nextSection('IA4')" href="javascript:void(0); " class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">I have no idea</a>
+            <a onclick="nextSection('IA4')" href="javascript:void(0); #IA4" class="text-nowrap button text-center m-3 px-5 py-2 fadeout fadein">I have no idea</a>
           </div>
           </div>
 
@@ -503,9 +503,9 @@
             </div>
           </div>
           <div class="row justify-content-center py-3">
-            <a onclick="nextSection('IA5'); workoutWall(1);" href="javascript:void(0); " class="button text-center m-3 px-5 py-2 fadeout fadein">Before 1930</a>
-            <a onclick="nextSection('IA5'); workoutWall(2);" href="javascript:void(0); " class="button text-center m-3 px-5 py-2 fadeout fadein">After 1930</a>
-            <a onclick="nextSection('IA5'); workoutWall(3);" href="javascript:void(0); " class="button text-center m-3 px-5 py-2 fadeout fadein">I don't know</a>
+            <a onclick="nextSection('IA5'); workoutWall(1);" href="javascript:void(0); #IA5" class="button text-center m-3 px-5 py-2 fadeout fadein">Before 1930</a>
+            <a onclick="nextSection('IA5'); workoutWall(2);" href="javascript:void(0); #IA5" class="button text-center m-3 px-5 py-2 fadeout fadein">After 1930</a>
+            <a onclick="nextSection('IA5'); workoutWall(3);" href="javascript:void(0); #IA5" class="button text-center m-3 px-5 py-2 fadeout fadein">I don't know</a>
           </div>
         </div>
       </section>
