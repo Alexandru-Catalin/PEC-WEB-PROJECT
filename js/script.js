@@ -317,6 +317,13 @@ $(document).ready(function(){
   //   $('#' + currentSection + 'A').fadeIn();
   // });
 
+  $('a').click(function(){
+  console.log(currentSection);
+if (currentSection != 'IA2'){
+   $('#' + currentSection).find('a').removeAttr("onclick");}
+  });
+
+
   //On card hover, do animation on icon
   $('#card1 a').hover(function(){
     $('#card1').find('i').addClass('w3-spin text-success');
