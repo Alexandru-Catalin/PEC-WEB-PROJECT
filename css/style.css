@@ -194,6 +194,10 @@ hr {
   font-size: 2em;
 }
 
+.layout-social a:hover {
+  text-decoration: none !important;
+}
+
 .hidden {
   display: none;
 }
