@@ -217,7 +217,7 @@ hr {
     background-color: #28235d;
     border: 1px Solid;
     border-color: #28235d;
-    border-radius: 0.4em;
+    border-radius: 0.0em;
     margin: 0.5em;
 }
 
@@ -232,7 +232,7 @@ hr {
     background-color: #fff;
     border: 1px Solid;
     border-color: #28235d;
-    border-radius: 0.4em;
+    border-radius: 0.0em;
     margin: 0.5em;
 }
 
@@ -240,11 +240,13 @@ hr {
     color: #fff;
     text-decoration: none;
     background-color: #28235d;
+    transition: 1s;
 }
 
 .btn-outline-primary{
   border-color: #28235d !important;
   color: #28235d !important;
+  border-radius: 0.0em !important;
 }
 
 
@@ -257,6 +259,7 @@ hr {
 .btn-outline-primary:hover, .btn-outline-primary:active, {
     background-color: #28235d !important;
     color: #fff !important;
+    transition: 1s !important;
 }
 
 .w3-animate-opacity {
@@ -283,7 +286,7 @@ hr {
   position: fixed;
   bottom: 20px;
   right: 30px;
-  z-index: 99;
+  z-index: 10000;
   font-size: 18px;
   border: none;
   outline: none;
