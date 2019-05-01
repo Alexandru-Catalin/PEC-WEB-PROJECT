@@ -1440,10 +1440,80 @@
     <div class="row justify-content-center py-3">
 
 
-    <a onclick="selectSection('page-heating'); hideSection('SUM3');" href="javascript:void(0); #page-heating" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
-    <a onclick="nextSection('page-start'); hideSection('SUM3');" href="javascript:void(0); #page-start" class="text-nowrap button text-center m-3 px-5 py-2">Home</a>
+    <a onclick="nextSection('details');" href="javascript:void(0); #details" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
   </div>
 </section>
+
+
+<section id="details"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+
+  <header class="page-section-header container py-5 mt-5">
+    <div class="row justify-content-center">
+      <div class="col-11 col-sm-10 col-md-8">
+        <h2 class="page-section-title">THE END</h2>
+        <p class="page-section-text"></p>
+      </div>
+    </div>
+  </header>
+
+
+
+  <section id="" class="layout-cards container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-8 col-sm-12 col-lg-10">
+
+        <div class="w3-animate-zoom card-deck">
+
+          <section class=" card mb-5 ">
+
+            <div class="card-body">
+              <h4 class="layout-title card-title mb-5">Would you like to send your details to PEC so they can conatact you back? (Optional)</h4>
+
+
+
+
+
+            <div id="form">
+
+                  <form action="mailto:tkcseow@gmail.com" method="post" enctype="text/plain">
+
+                    <label for="fname">First Name</label><br>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                    <br><label for="lname">Last Name</label><br>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                    <br><label for="ctnum">Contact Number</label><br>
+                    <input type="number" id="ctnum" name="contactnumber" placeholder="Your contact number..">
+
+                    <br><label for="email">Email Address</label><br>
+                    <input type="text" id="email" name="email" placeholder="Your email address..">
+
+                    <br><label for="msage">Message</label>
+                    <textarea id="msage" name="message" rows="10" cols="30" placeholder="Your message here.."></textarea>
+
+                    <input type="submit" value="Send">
+
+                  </form>
+                </div>
+  </div>
+
+
+
+          </section>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
 
 
     <!-- Wall Modal -->
