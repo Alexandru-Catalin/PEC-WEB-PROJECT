@@ -5,7 +5,7 @@ var isO = false;
 var currentSection = '';
 var nexSection = '';
 
-var solutionsNeeded = [];
+var solutionsInsulation = [];
 
 
 
@@ -255,18 +255,35 @@ if (wallPic == 6)
 
 var index = 0;
 
-function finishSolution(id1,id2){
+var allSolutions = [];
+
+function finishInsulation(id1,id2){
+  hideSections(0);
+  nextSection(id1);
+  addSolution(id2);
+  displaySummary();
+}
+
+function finishHeating(id1,id2){
   hideSections(0);
   nextSection(id1);
   addSolutionHeating(id2);
   displaySummary2();
 }
 
+function finishOther(id1,id2){
+  hideSections(0);
+  nextSection(id1);
+  addSolutionOther(id2);
+  displaySummary3();
+}
+
 function addSolution(id)
 {
   console.log(id);
-  solutionsNeeded.push(id);
-  console.log(solutionsNeeded[index]);
+  solutionsInsulation.push(id);
+  allSolutions.push(id);
+  console.log(solutionsInsulation[index]);
   index++;
 }
 
@@ -276,21 +293,34 @@ function addSolutionHeating(id)
 {
   console.log(id);
   solutionHeating.push(id);
+  allSolutions.push(id);
+
   console.log(solutionHeating[index]);
   index++;
 }
 
+var solutionOther = [];
+
+function addSolutionOther(id)
+{
+  console.log(id);
+  solutionOther.push(id);
+  allSolutions.push(id);
+
+  console.log(solutionOther[index]);
+  index++;
+}
 
 function displaySummary()
 {
-  for (var i = 0; i < solutionsNeeded.length; ++i)
+  for (var i = 0; i < solutionsInsulation.length; ++i)
   {
-    var solution = searchSolution(solutionsNeeded[i]);
+    var solution = searchSolution(solutionsInsulation[i]);
     document.getElementById('summary').innerHTML += solution.title + "<br>";
       document.getElementById('summary').innerHTML += solution.text + "<br><br><br>";
   }
 
-  localStorage.setItem("solutions", solutionsNeeded);
+  localStorage.setItem("solutions", solutionsInsulation);
 
 
 
@@ -310,6 +340,49 @@ function displaySummary2()
 
 
 }
+
+function displaySummary3()
+{
+  for (var i = 0; i < solutionOther.length; ++i)
+  {
+    var solution = searchSolution(solutionOther[i]);
+    document.getElementById('summary3').innerHTML += solution.title + "<br>";
+      document.getElementById('summary3').innerHTML += solution.text + "<br><br><br>";
+  }
+
+  localStorage.setItem("solutions", solutionOther);
+
+
+
+}
+
+function displaySummaryFull()
+{
+  for (var i = 0; i < solutionsInsulation.length; ++i)
+  {
+    var solution = searchSolution(solutionsInsulation[i]);
+    document.getElementById('summary11').innerHTML += solution.title + "<br>";
+      document.getElementById('summary11').innerHTML += solution.text + "<br><br><br>";
+  }
+
+  for (var i = 0; i < solutionHeating.length; ++i)
+  {
+    var solution = searchSolution(solutionHeating[i]);
+    document.getElementById('summary22').innerHTML += solution.title + "<br>";
+      document.getElementById('summary22').innerHTML += solution.text + "<br><br><br>";
+  }
+  for (var i = 0; i < solutionOther.length; ++i)
+  {
+    var solution = searchSolution(solutionOther[i]);
+    document.getElementById('summary33').innerHTML += solution.title + "<br>";
+      document.getElementById('summary33').innerHTML += solution.text + "<br><br><br>";
+  }
+  localStorage.setItem("solutions", allSolutions);
+
+
+
+}
+
 
 function searchSolution(id)
 {

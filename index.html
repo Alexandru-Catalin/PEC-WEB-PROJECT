@@ -863,7 +863,7 @@
             <div class="row justify-content-center py-3">
 
 
-            <a onclick="hideSections(0); nextSection('SUM1'); addSolution('S9'); displaySummary();" href="javascript:void(0); #SUM1" class="text-nowrap button text-center m-3 px-5 py-2">See Summary</a>
+            <a onclick="finishInsulation('SUM1', 'S9');" href="javascript:void(0); #SUM1" class="text-nowrap button text-center m-3 px-5 py-2">See Summary</a>
 
 
           </div>
@@ -881,7 +881,7 @@
             <div class="row justify-content-center py-3">
 
 
-            <a onclick="hideSections(0); nextSection('SUM1'); addSolution('S10'); displaySummary();" href="javascript:void(0); #SUM1" class="text-nowrap button text-center m-3 px-5 py-2">See Summary</a>
+            <a onclick="finishInsulation('SUM1', 'S10');" href="javascript:void(0); #SUM1" class="text-nowrap button text-center m-3 px-5 py-2">See Summary</a>
 
 
           </div>
@@ -968,7 +968,7 @@
               <p>Advice on old storage heaters</p>
             </div>
           </div>
-          <a onclick="finishSolution('SUM2','S11');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishHeating('SUM2','S11');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -982,7 +982,7 @@
               <p>Advice on newer storage heaters</p>
             </div>
           </div>
-          <a onclick="finishSolution('SUM2','S12');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishHeating('SUM2','S12');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1010,7 +1010,7 @@
               <p>Call us on 01752 477 117 or email us at support@plymouthenergycommunity.com</p>
             </div>
           </div>
-          <a onclick="finishSolution('SUM2','S18');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishHeating('SUM2','S18');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1039,7 +1039,7 @@
               <p>Broken Boiler Advise here </p>
             </div>
           </div>
-          <a onclick="finishSolution('SUM2','S15');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishHeating('SUM2','S15');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1067,7 +1067,7 @@
               <p>Old boiler advice</p>
             </div>
           </div>
-          <a onclick="finishSolution('SUM2','S16');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishHeating('SUM2','S16');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1096,7 +1096,7 @@
                 <p>Advice about heating controls</p>
               </div>
             </div>
-            <a onclick="finishSolution('SUM2','S17')" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+            <a onclick="finishHeating('SUM2','S17')" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
           </div>
         </section>
       </div>
@@ -1110,7 +1110,7 @@
                 <p>Advice about first time central heating</p>
               </div>
             </div>
-            <a onclick="finishSolution('SUM2','IRH1')" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+            <a onclick="finishHeating('SUM2','IRH1')" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
           </div>
         </section>
       </div>
@@ -1130,7 +1130,7 @@
     <div class="row justify-content-center py-3">
 
 
-    <a onclick="selectSection('page-heating'); hideSection('SUM2');" href="javascript:void(0); #page-heating" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+    <a onclick="selectSection('page-other'); hideSection('SUM2');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
     <a onclick="nextSection('page-start'); hideSection('SUM2');" href="javascript:void(0); #page-start" class="text-nowrap button text-center m-3 px-5 py-2">Home</a>
   </div>
 </section>
@@ -1234,7 +1234,7 @@
           </div>
           <div class="row justify-content-center py-3">
           <a onclick="nextSection('OB2')" href="javascript:void(0); #OB2" class="button text-center m-3 px-5 py-2">Yes</a>
-          <a onclick="nextSection('S24')" href="javascript:void(0); #S24" class="button text-center m-3 px-5 py-2">No</a>
+          <a onclick="nextSection('S24'); addSolutionOther('S94')" href="javascript:void(0); #S24" class="button text-center m-3 px-5 py-2">No</a>
         </div>
       </div>
       </section>
@@ -1268,7 +1268,7 @@
                 </div>
               </div>
               <div class="row justify-content-center py-3">
-              <a onclick="nextSection('OB5')" href="javascript:void(0) #OB5" class="button text-center m-3 px-5 py-2">Next</a>
+              <a onclick="nextSection('OB5'); addSolutionOther('S19');" href="javascript:void(0) #OB5" class="button text-center m-3 px-5 py-2">Next</a>
             </div>
           </div>
           </section>
@@ -1285,7 +1285,7 @@
                     </div>
                   </div>
                   <div class="row justify-content-center py-3">
-                  <a onclick="nextSection('OB5')" href="javascript:void(0) #OB5" class="button text-center m-3 px-5 py-2">Next</a>
+                  <a onclick="nextSection('OB5'); addSolutionOther('S20');" href="javascript:void(0) #OB5" class="button text-center m-3 px-5 py-2">Next</a>
                 </div>
               </div>
               </section>
@@ -1315,10 +1315,13 @@
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
-              <h3 class="page-section-title">Yes</h3>
+              <h3 class="page-section-title">Guidance on using filler and foam to block up gap</h3>
             </div>
           </div>
-          <a role="button" class="button text-center m-3 px-5 py-2" href="#page-heating">Guidance on using filler and foam to block up gap</a>
+          <div class="row justify-content-center py-3">
+          <a onclick="nextSection('OB7'); addSolutionOther('S21');" href="javascript:void(0) #OB7" class="button text-center m-3 px-5 py-2">Next</a>
+
+        </div>
         </div>
       </section>
     </div>
@@ -1344,11 +1347,11 @@
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
-              <h3 class="page-section-title">Yes</h3>
+              <h3 class="page-section-title">Guidance on secondary glazing</h3>
             </div>
           </div>
           <div class="row justify-content-center py-3">
-          <a role="button" class="button text-center m-3 px-5 py-2" href="#page-heating">Guidance on secondary glazing</a>
+          <a onclick="nextSection('OB8'); addSolutionOther('S22');" href="javascript:void(0) #OB8" class="button text-center m-3 px-5 py-2">Next</a>
         </div>
       </div>
       </section>
@@ -1376,11 +1379,11 @@
         <div class="container">
           <div class="row justify-content-center py-3">
             <div class="col-11 col-sm-10 col-md-8">
-              <h3 class="page-section-title">Yes</h3>
+              <h3 class="page-section-title">Guidance on reducing draughts to the loft</h3>
             </div>
           </div>
           <div class="row justify-content-center py-3">
-          <a role="button" class="button text-center m-3 px-5 py-2" href="#page-heating">Guidance on reducing draughts to the loft</a>
+            <a onclick="nextSection('S24'); addSolutionOther('S23');" href="javascript:void(0) #S24" class="button text-center m-3 px-5 py-2">Next</a>
         </div>
       </div>
       </section>
@@ -1395,13 +1398,52 @@
                     </div>
                   </div>
                   <div class="row justify-content-center py-3">
-                  <a onclick="nextSection('')" href="javascript:void(0)" class="button text-center m-3 px-5 py-2">See the summary</a>
+                  <a onclick="finishOther('SUM3','S24')" href="javascript:void(0)" class="button text-center m-3 px-5 py-2">See the summary</a>
                 </div>
               </div>
               </section>
             </div>
 
 </article>
+
+<section id="SUM3"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+  <div class="container">
+    <div class="row justify-content-center py-3 mt-5">
+      <div class="col-11 col-sm-10 col-md-8">
+        <h3 class="page-section-title">Summary - Other</h3>
+        <p id="summary3"></p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center py-3">
+
+
+    <a onclick="hideSection('SUM3'); nextSection('SUM4'); displaySummaryFull();" href="javascript:void(0); #SUM4" class="text-nowrap button text-center m-3 px-5 py-2">See Full Summary</a>
+    <a onclick="nextSection('page-start'); hideSection('SUM3');" href="javascript:void(0); #page-start" class="text-nowrap button text-center m-3 px-5 py-2">Home</a>
+  </div>
+</section>
+
+
+<section id="SUM4"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+  <div class="container">
+    <div class="row justify-content-center py-3 mt-5">
+      <div class="col-11 col-sm-10 col-md-8">
+        <h3 class="page-section-title">Summary - Insulation</h3>
+        <p id="summary11"></p>
+        <h3 class="page-section-title">Summary - Heating</h3>
+        <p id="summary22"></p>
+        <h3 class="page-section-title">Summary - Other</h3>
+        <p id="summary33"></p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center py-3">
+
+
+    <a onclick="selectSection('page-heating'); hideSection('SUM3');" href="javascript:void(0); #page-heating" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+    <a onclick="nextSection('page-start'); hideSection('SUM3');" href="javascript:void(0); #page-start" class="text-nowrap button text-center m-3 px-5 py-2">Home</a>
+  </div>
+</section>
 
 
     <!-- Wall Modal -->

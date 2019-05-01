@@ -157,5 +157,41 @@ var solutions = [
     title: 'Solution',
     text: 'Advice about first time central heating',
   },
+  {
+    id: 'S40',
+    title: 'Which one looks like the light bulb of your home?',
+    text: 'Advice about first time central heating',
+  },
+  {
+    id: 'S19',
+    title: 'Draught proofing may help to make your home warmer and cheaper to heat. PEC may be able to install some for free. Continue for tips and more advanced draught proofing',
+    text: 'Call PEC',
+  },
+  {
+    id: 'S20',
+    title: 'You have all the basics covered. Continue for tips on more advanced draught proofing',
+    text: 'Next',
+  },
+  {
+    id: 'S21',
+    title: 'Guidance on using filler and foam to block up gap',
+    text: 'Advice here',
+  },
+  {
+    id: 'S22',
+    title: 'Guidance on secondary glazing',
+    text: 'Advice here',
+  },
+  {
+    id: 'S23',
+    title: 'Guidance on reducing draughts to the loft',
+    text: 'Advice here',
+  },
+
+  {
+    id: 'S94',
+    title: 'No Draught Prevention Needed',
+    text: 'Advise here',
+  },
 
 ]
