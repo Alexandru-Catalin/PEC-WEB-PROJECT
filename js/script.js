@@ -255,6 +255,13 @@ if (wallPic == 6)
 
 var index = 0;
 
+function finishSolution(id1,id2){
+  hideSections(0);
+  nextSection(id1);
+  addSolutionHeating(id2);
+  displaySummary2();
+}
+
 function addSolution(id)
 {
   console.log(id);
@@ -262,6 +269,17 @@ function addSolution(id)
   console.log(solutionsNeeded[index]);
   index++;
 }
+
+var solutionHeating = [];
+
+function addSolutionHeating(id)
+{
+  console.log(id);
+  solutionHeating.push(id);
+  console.log(solutionHeating[index]);
+  index++;
+}
+
 
 function displaySummary()
 {
@@ -273,6 +291,21 @@ function displaySummary()
   }
 
   localStorage.setItem("solutions", solutionsNeeded);
+
+
+
+}
+
+function displaySummary2()
+{
+  for (var i = 0; i < solutionHeating.length; ++i)
+  {
+    var solution = searchSolution(solutionHeating[i]);
+    document.getElementById('summary2').innerHTML += solution.title + "<br>";
+      document.getElementById('summary2').innerHTML += solution.text + "<br><br><br>";
+  }
+
+  localStorage.setItem("solutions", solutionHeating);
 
 
 
@@ -404,20 +437,7 @@ $(function() {
   });
 
 
-  $(window).on('activate.bs.scrollspy', function() {
-    var hash = $('.site-nav')
-      .find('a.active')
-      .attr('href');
 
-      console.log(hash);
-      hash.replace("javascript:void(0); " ,"");
-
-      if (hash !== '#page-top') {
-        $('header nav').addClass('inbody');
-      } else {
-        $('header nav').removeClass('inbody');
-      }
-  });
 
   $('#site-modal').on('show.bs.modal', function(event) {
     $(this)

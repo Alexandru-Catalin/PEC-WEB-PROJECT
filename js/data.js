@@ -112,5 +112,50 @@ var solutions = [
     text: 'Advise here',
   },
 
+  {
+    id: 'S11',
+    title: 'Solution',
+    text: 'Advice on old storage heaters',
+  },
+  {
+    id: 'S12',
+    title: 'Solution',
+    text: 'Advice on newer storage heaters',
+  },
+  {
+    id: 'S13',
+    title: 'Other centralised heating',
+    text: 'As your heating system is relatively unique we would recomend a call or visit with one of our advisors to look at ways to improve your heating',
+  },
+  {
+    id: 'S18',
+    title: 'Speak to PEC advisor',
+    text: 'Call us on 01752 477 117 or email us at support@plymouthenergycommunity.com',
+  },
+  {
+    id: 'S15',
+    title: 'Solution',
+    text: 'Broken boiler advice here',
+  },
+  {
+    id: 'S16',
+    title: 'Solution',
+    text: 'Old boiler advice',
+  },
+  {
+    id: 'S14',
+    title: 'Heating controls',
+    text: 'Do you have heating controls (include pictures of thermostatic radiator valves, room thermostats, programmable room thermostats etc)',
+  },
+  {
+    id: 'S17',
+    title: 'Solution',
+    text: 'Advice about heating controls',
+  },
+  {
+    id: 'IRH1',
+    title: 'Solution',
+    text: 'Advice about first time central heating',
+  },
 
 ]

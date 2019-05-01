@@ -30,7 +30,7 @@
 
     <!-- Overlay content -->
     <div class="overlay-content">
-      <a class="nav-item nav-link" href="#page-start" onclick="nextSection('page-start'); hideSections(0); closeNav()">Get Started</a>
+      <a class="nav-item nav-link" href="#page-start" onclick="nextSection('page-start'); hideSections(); closeNav()">Get Started</a>
       <a class="nav-item nav-link" href="#page-insulation" onclick="selectSection('page-insulation'); hideSection('page-start'); closeNav()" >Insulation</a>
       <a class="nav-item nav-link" onclick="selectSection('page-heating'); hideSection('page-start'); closeNav()" href="#page-heating">Heating</a>
       <a class="nav-item nav-link" onclick="selectSection('page-other'); hideSection('page-start'); closeNav()" href="#page-other">Other Improvements</a>
@@ -904,6 +904,7 @@
 
 
     <a onclick="selectSection('page-heating'); hideSection('SUM1');" href="javascript:void(0); #page-heating" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+    <a onclick="nextSection('page-start'); hideSection('SUM1');" href="javascript:void(0); #page-start" class="text-nowrap button text-center m-3 px-5 py-2">Home</a>
 
 
   </div>
@@ -967,7 +968,7 @@
               <p>Advice on old storage heaters</p>
             </div>
           </div>
-          <a onclick="selectSection('page-other'); hideSection('page-heating');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishSolution('SUM2','S11');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -981,7 +982,7 @@
               <p>Advice on newer storage heaters</p>
             </div>
           </div>
-          <a onclick="selectSection('page-other'); hideSection('page-heating');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishSolution('SUM2','S12');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1009,7 +1010,7 @@
               <p>Call us on 01752 477 117 or email us at support@plymouthenergycommunity.com</p>
             </div>
           </div>
-          <a onclick="selectSection('page-other'); hideSection('page-heating');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishSolution('SUM2','S18');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1038,7 +1039,7 @@
               <p>Broken Boiler Advise here </p>
             </div>
           </div>
-          <a onclick="selectSection('page-other'); hideSection('page-heating');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishSolution('SUM2','S15');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1066,7 +1067,7 @@
               <p>Old boiler advice</p>
             </div>
           </div>
-          <a onclick="selectSection('page-other'); hideSection('page-heating');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+          <a onclick="finishSolution('SUM2','S16');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
         </div>
       </section>
     </div>
@@ -1095,7 +1096,7 @@
                 <p>Advice about heating controls</p>
               </div>
             </div>
-            <a onclick="selectSection('page-other'); hideSection('page-heating');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+            <a onclick="finishSolution('SUM2','S17')" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
           </div>
         </section>
       </div>
@@ -1109,12 +1110,30 @@
                 <p>Advice about first time central heating</p>
               </div>
             </div>
-            <a onclick="selectSection('page-other'); hideSection('page-heating');" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+            <a onclick="finishSolution('SUM2','IRH1')" href="javascript:void(0); #page-other" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
           </div>
         </section>
       </div>
 
+
 </article>
+
+<section id="SUM2"  style="display:none;" class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+  <div class="container">
+    <div class="row justify-content-center py-3 mt-5">
+      <div class="col-11 col-sm-10 col-md-8">
+        <h3 class="page-section-title">Summary - Heating</h3>
+        <p id="summary2"></p>
+      </div>
+    </div>
+
+    <div class="row justify-content-center py-3">
+
+
+    <a onclick="selectSection('page-heating'); hideSection('SUM2');" href="javascript:void(0); #page-heating" class="text-nowrap button text-center m-3 px-5 py-2">Next</a>
+    <a onclick="nextSection('page-start'); hideSection('SUM2');" href="javascript:void(0); #page-start" class="text-nowrap button text-center m-3 px-5 py-2">Home</a>
+  </div>
+</section>
 
     <!--Other Improvements-->
 <article id="page-other" style="display:none;" class="page-section text-center w3-animate-opacity">
@@ -1213,9 +1232,11 @@
               <h3 class="page-section-title">Is your house draughty?</h3>
             </div>
           </div>
+          <div class="row justify-content-center py-3">
           <a onclick="nextSection('OB2')" href="javascript:void(0); #OB2" class="button text-center m-3 px-5 py-2">Yes</a>
           <a onclick="nextSection('S24')" href="javascript:void(0); #S24" class="button text-center m-3 px-5 py-2">No</a>
         </div>
+      </div>
       </section>
     </div>
 
@@ -1230,9 +1251,11 @@
               <p class="page-section-text">Do you have a chimney that isn't used for more than a few days at a time?</p>
             </div>
           </div>
+          <div class="row justify-content-center py-3">
           <a onclick="nextSection('S19')" href="javascript:void(0) #S19" class="button text-center m-3 px-5 py-2">Yes</a>
           <a onclick="nextSection('S20')" href="javascript:void(0) #S20" class="button text-center m-3 px-5 py-2">No</a>
         </div>
+      </div>
       </section>
     </div>
 
@@ -1244,8 +1267,10 @@
                   <h3 class="page-section-title">Draught proofing may help to make your home warmer and cheaper to heat. PEC may be able to install some for free. Continue for tips and more advanced draught proofing</h3>
                 </div>
               </div>
+              <div class="row justify-content-center py-3">
               <a onclick="nextSection('OB5')" href="javascript:void(0) #OB5" class="button text-center m-3 px-5 py-2">Next</a>
             </div>
+          </div>
           </section>
         </div>
 
@@ -1259,8 +1284,10 @@
                       <h3 class="page-section-title">You have all the basics covered. Continue for tips on more advanced draught proofing</h3>
                     </div>
                   </div>
+                  <div class="row justify-content-center py-3">
                   <a onclick="nextSection('OB5')" href="javascript:void(0) #OB5" class="button text-center m-3 px-5 py-2">Next</a>
                 </div>
+              </div>
               </section>
             </div>
 
@@ -1275,9 +1302,11 @@
               <p class="page-section-text">Do you have any holes or cracks in your walls, including where your walls meet door or window frames</p>
             </div>
           </div>
+          <div class="row justify-content-center py-3">
           <a onclick="nextSection('S21')" href="javascript:void(0) #S21" class="button text-center m-3 px-5 py-2">Yes</a>
           <a onclick="nextSection('OB7')" href="javascript:void(0) #OB7" class="button text-center m-3 px-5 py-2">No</a>
         </div>
+      </div>
       </section>
     </div>
 
@@ -1302,9 +1331,11 @@
               <h3 class="page-section-title">Do you have single glazed windows?</h3>
             </div>
           </div>
+          <div class="row justify-content-center py-3">
           <a onclick="nextSection('S22')" href="javascript:void(0) #S22" class="button text-center m-3 px-5 py-2">Yes</a>
           <a onclick="nextSection('OB8')" href="javascript:void(0) #OB8" class="button text-center m-3 px-5 py-2">No</a>
         </div>
+      </div>
       </section>
     </div>
 
@@ -1330,9 +1361,11 @@
               <h3 class="page-section-title">Do you have recessed ceiling lights upstairs or a loft hatch that does not form a seal?</h3>
             </div>
           </div>
+          <div class="row justify-content-center py-3">
           <a onclick="nextSection('S23')" href="javascript:void(0) #S23" class="button text-center m-3 px-5 py-2">Yes</a>
           <a onclick="nextSection('S24')" href="javascript:void(0) #S24" class="button text-center m-3 px-5 py-2">No</a>
         </div>
+      </div>
       </section>
     </div>
 
@@ -1344,8 +1377,10 @@
               <h3 class="page-section-title">Yes</h3>
             </div>
           </div>
+          <div class="row justify-content-center py-3">
           <a role="button" class="button text-center m-3 px-5 py-2" href="#page-heating">Guidance on reducing draughts to the loft</a>
         </div>
+      </div>
       </section>
     </div>
 
@@ -1357,8 +1392,10 @@
                       <h3 class="page-section-title">Thank you for taking the survey</h3>
                     </div>
                   </div>
+                  <div class="row justify-content-center py-3">
                   <a onclick="nextSection('')" href="javascript:void(0)" class="button text-center m-3 px-5 py-2">See the summary</a>
                 </div>
+              </div>
               </section>
             </div>
 
