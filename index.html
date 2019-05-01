@@ -30,10 +30,10 @@
 
     <!-- Overlay content -->
     <div class="overlay-content">
-      <a class="nav-item nav-link" href="#page-start" onclick="closeNav()">Get Started</a>
-      <a class="nav-item nav-link" href="#page-insulation" onclick="selectSection('page-insulation'); closeNav()" >Insulation</a>
-      <a class="nav-item nav-link" onclick="selectSection('page-heating'); closeNav()" href="#page-heating">Heating</a>
-      <a class="nav-item nav-link" onclick="selectSection('page-other'); closeNav()" href="#page-other">Other Improvements</a>
+      <a class="nav-item nav-link" href="#page-start" onclick="nextSection('page-start'); hideSections(0); closeNav()">Get Started</a>
+      <a class="nav-item nav-link" href="#page-insulation" onclick="selectSection('page-insulation'); hideSection('page-start'); closeNav()" >Insulation</a>
+      <a class="nav-item nav-link" onclick="selectSection('page-heating'); hideSection('page-start'); closeNav()" href="#page-heating">Heating</a>
+      <a class="nav-item nav-link" onclick="selectSection('page-other'); hideSection('page-start'); closeNav()" href="#page-other">Other Improvements</a>
     </div>
 
   </div>

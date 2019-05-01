@@ -461,6 +461,7 @@ function openNav() {
 /* Close */
 function closeNav() {
   document.getElementById("myNav").style.height = "0%";
+    document.getElementById("navBtn").classList.remove("hamburgerOpen");
   isNavOpen = false;
 
 }
