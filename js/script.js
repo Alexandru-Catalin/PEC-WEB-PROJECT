@@ -423,11 +423,11 @@ $(document).ready(function(){
   //   $('#' + currentSection + 'A').fadeIn();
   // });
 
-  $('a').click(function(){
-  console.log(currentSection);
-if (currentSection != 'IA2'){
-   $('#' + currentSection).find('a').removeAttr("onclick");}
-  });
+//   $('a').click(function(){
+//   console.log(currentSection);
+// if (currentSection != 'IA2'){
+//    $('#' + currentSection).find('a').removeAttr("onclick");}
+//   });
 
 
   //On card hover, do animation on icon
@@ -561,23 +561,15 @@ function closeNav() {
 
 
 function validateForm() {
-  var x = document.forms["myForm"]["fname"].value;
-  var isSendingToPEC = false;
+  var x = document.forms["myForm"]["contactnumber"].value;
 
-
+  if (document.getElementById('sendCheck').checked == true)
+{
   if (x == "") {
-    alert("Name must be filled out");
+    alert("Please Include a Number");
     return false;
   }
-
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-  if (x == "") {
-    alert("Name must be filled out");
-    return false;
-  }
+}
 }
 
 
