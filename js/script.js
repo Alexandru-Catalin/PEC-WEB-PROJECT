@@ -670,35 +670,35 @@ var savingsText = "";
 function validateLightSurvey() {
 
   var light1 = 0;
-if (document.forms["lightSurvey"]["light1"].value == null)
+if (document.forms["lightSurvey"]["light1"].value != "")
 {
     console.log(document.forms["lightSurvey"]["light1"].value);
   light1 = document.forms["lightSurvey"]["light1"].value;
 }
 
   var light2 = 0;
-  
-  if (document.forms["lightSurvey"]["light2"].value == null)
+
+  if (document.forms["lightSurvey"]["light2"].value != "")
   {
     light2 = document.forms["lightSurvey"]["light2"].value;
   }
   var light3 = 0;
-  if (document.forms["lightSurvey"]["light3"].value == null)
+  if (document.forms["lightSurvey"]["light3"].value != "")
   {
     light3 = document.forms["lightSurvey"]["light3"].value;
   }
   var light4 = 0;
-  if (document.forms["lightSurvey"]["light4"].value == null)
+  if (document.forms["lightSurvey"]["light4"].value != "")
   {
     light4 = document.forms["lightSurvey"]["light4"].value;
   }
   var light5 = 0;
-  if (document.forms["lightSurvey"]["light5"].value == null)
+  if (document.forms["lightSurvey"]["light5"].value != "")
   {
     light5 = document.forms["lightSurvey"]["light5"].value;
   }
   var light6 = 0;
-  if (document.forms["lightSurvey"]["light6"].value == null)
+  if (document.forms["lightSurvey"]["light6"].value != "")
   {
     light6 = document.forms["lightSurvey"]["light6"].value;
   }
