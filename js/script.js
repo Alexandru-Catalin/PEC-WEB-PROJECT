@@ -563,6 +563,8 @@ function closeNav() {
 function validateForm() {
   var x = document.forms["myForm"]["fname"].value;
   var isSendingToPEC = false;
+
+
   if (x == "") {
     alert("Name must be filled out");
     return false;
@@ -575,5 +577,19 @@ function validateForm() {
   if (x == "") {
     alert("Name must be filled out");
     return false;
+  }
+}
+
+
+function SendToPEC()
+{
+  if (document.getElementById('sendCheck').checked == true)
+  {
+    document.getElementById('sendToPEC').style.display = 'block';
+  }
+  else {
+    {
+      document.getElementById('sendToPEC').style.display = 'none';
+    }
   }
 }
