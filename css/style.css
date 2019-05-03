@@ -137,7 +137,7 @@ hr {
     }
 
     50% {
-     transform: scale(1.1, 1.1);
+     transform: scale(1.07, 1.07);
     }
 
     100% {
@@ -208,14 +208,26 @@ hr {
 }
 
 .pulse {
-    animation: pulse 1s linear infinite;
+    animation: pulse 2s linear infinite;
     color: #ff3f00;
+    transition: 1s;
 }
 
 .lightbulb
 {
-  color: #ffbf00
+  animation: pulse 2s linear infinite;
+  color: #ffbf00;
+  transition: 1s;
 }
+
+.house
+{
+  animation: pulse 2s linear infinite;
+  color: #28a745;
+  transition: 1s;
+}
+
+
 .button {
     color: #fff;
     background-color: #28235d;

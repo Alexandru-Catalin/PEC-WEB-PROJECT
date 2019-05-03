@@ -432,10 +432,10 @@ if (currentSection != 'IA2'){
 
   //On card hover, do animation on icon
   $('#card1 a').hover(function(){
-    $('#card1').find('i').addClass('w3-spin text-success');
+    $('#card1').find('i').addClass('house');
   },
   function(){
-    $('#card1').find('i').removeClass('w3-spin text-success');
+    $('#card1').find('i').removeClass('house');
 });
 
 //On card hover, do animation on icon
