@@ -343,6 +343,9 @@ function displaySummary2()
 
 function displaySummary3()
 {
+
+  document.getElementById('summary3').innerHTML += savingsText + "<br><br><br>";
+
   for (var i = 0; i < solutionOther.length; ++i)
   {
     var solution = searchSolution(solutionOther[i]);
@@ -371,6 +374,11 @@ function displaySummaryFull()
     document.getElementById('summary22').innerHTML += solution.title + "<br>";
       document.getElementById('summary22').innerHTML += solution.text + "<br><br><br>";
   }
+
+
+  document.getElementById('summary33').innerHTML += savingsText + "<br><br><br>";
+
+
   for (var i = 0; i < solutionOther.length; ++i)
   {
     var solution = searchSolution(solutionOther[i]);
@@ -561,15 +569,88 @@ function closeNav() {
 
 
 function validateForm() {
-  var x = document.forms["myForm"]["contactnumber"].value;
+  var fName = document.forms["myForm"]["firstname"].value;
+  var lName = document.forms["myForm"]["lastname"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var ctNum = document.forms["myForm"]["contactnumber"].value;
+  var message = document.forms["myForm"]["message"].value;
+
+  var mailBody ="Hi " + fName + " " + lName + ",%0D%0A%0D%0A";
+      mailBody += "Thank you for taking the PEC online form for reducing your bills. %0D%0AYou are receiving this email because you completed the form on our website.%0D%0A";
+      mailBody += "This email contains information about all the solutions that are applicable to you. %0D%0A%0D%0A"
+
+var summaryText = "";
+summaryText += "%0D%0A%0D%0AInsulation Solutions - %0D%0A%0D%0A";
+
+for (var i = 0; i < solutionsInsulation.length; i++)
+{
+  var solution = searchSolution(solutionsInsulation[i]);
+  summaryText += solution.title + "%0D%0A";
+  summaryText += solution.text + "%0D%0A%0D%0A";
+}
+
+summaryText += "%0D%0A%0D%0AHeating Solutions - %0D%0A%0D%0A";
+
+for (var i = 0; i < solutionHeating.length; i++)
+{
+  var solution = searchSolution(solutionHeating[i]);
+  console.log(solution.title);
+  console.log(solution.text);
+  summaryText += solution.title + "%0D%0A";
+  summaryText += solution.text + "%0D%0A%0D%0A";
+}
+
+summaryText += "%0D%0A%0D%0AOther Solutions - %0D%0A%0D%0A";
+summaryText += savingsText + "%0D%0A%0D%0A";
+
+for (var i = 0; i < solutionOther.length; i++)
+{
+  var solution = searchSolution(solutionOther[i]);
+  console.log(solution.title);
+  console.log(solution.text);
+  summaryText += solution.title + "%0D%0A";
+  summaryText += solution.text + "%0D%0A%0D%0A";
+}
+
+var details = "This is the contact number that you have provided for PEC to contact you back: %0D%0A%0D%0A" + ctNum + "%0D%0A%0D%0A";
+var comments = "This is the comment you have left for PEC:%0D%0A%0D%0A" + message + "%0D%0A%0D%0A";
+
+var mailFooter = "%0D%0A%0D%0AFor questions contact us at support@plymouthenergycommunity.com or call us on 01752 477 117 %0D%0A%0D%0A";
+
+
 
   if (document.getElementById('sendCheck').checked == true)
 {
-  if (x == "") {
+  if (ctNum == "") {
     alert("Please Include a Number");
     return false;
   }
 }
+
+console.log(email);
+
+if (document.getElementById('sendCheck').checked == true)
+{
+var z =  email + "?subject=PEC%20Form&body=THIS MESSAGE WILL AUTODESTROY IN T-10SEC" + "%0D%0A" +  mailBody + summaryText + details + comments + mailFooter + "%0D%0A";
+}
+else {
+  var z =  email + "?subject=PEC%20Form&body=THIS MESSAGE WILL AUTODESTROY IN T-10SEC" + "%0D%0A" +  mailBody + summaryText + mailFooter + "%0D%0A";
+
+}
+var fName = document.forms["myForm"]["firstname"].value;
+var lName = document.forms["myForm"]["lastname"].value;
+
+
+
+console.log(z);
+
+document.getElementById('form').action = "mailto:" + z;
+
+if (document.getElementById('sendCheck').checked == true)
+{
+  document.getElementById('form').action = "mailto:tkcseow@gmail.com;" + z;  //CHANGE!!!!!!!!!!!!!!!!******************
+}
+
 }
 
 
@@ -584,4 +665,84 @@ function SendToPEC()
       document.getElementById('sendToPEC').style.display = 'none';
     }
   }
+}
+var savingsText = "";
+function validateLightSurvey() {
+
+  var light1 = 0;
+if (document.forms["lightSurvey"]["light1"].value == null)
+{
+    console.log(document.forms["lightSurvey"]["light1"].value);
+  light1 = document.forms["lightSurvey"]["light1"].value;
+}
+
+  var light2 = 0;
+  
+  if (document.forms["lightSurvey"]["light2"].value == null)
+  {
+    light2 = document.forms["lightSurvey"]["light2"].value;
+  }
+  var light3 = 0;
+  if (document.forms["lightSurvey"]["light3"].value == null)
+  {
+    light3 = document.forms["lightSurvey"]["light3"].value;
+  }
+  var light4 = 0;
+  if (document.forms["lightSurvey"]["light4"].value == null)
+  {
+    light4 = document.forms["lightSurvey"]["light4"].value;
+  }
+  var light5 = 0;
+  if (document.forms["lightSurvey"]["light5"].value == null)
+  {
+    light5 = document.forms["lightSurvey"]["light5"].value;
+  }
+  var light6 = 0;
+  if (document.forms["lightSurvey"]["light6"].value == null)
+  {
+    light6 = document.forms["lightSurvey"]["light6"].value;
+  }
+
+
+  console.log(light1);
+  console.log(light2);
+  console.log(light3);
+  console.log(light4);
+  console.log(light5);
+  console.log(light6);
+    console.log(lightCost[0].HoursPerDay);
+
+ var filamentPerYear = (((lights[0].wattsUsed * (lightCost[0].HoursPerDay * 365)) / 1000) * lightCost[0].averagekWh) * light1;
+ var halogen1PerYear = (((lights[1].wattsUsed * (lightCost[0].HoursPerDay * 365)) / 1000) * lightCost[0].averagekWh) * light2;
+ var halogen2PerYear = (((lights[2].wattsUsed * (lightCost[0].HoursPerDay * 365)) / 1000) * lightCost[0].averagekWh)*light3;
+ var cfl1PerYear = (((lights[3].wattsUsed * (lightCost[0].HoursPerDay * 365)) / 1000) * lightCost[0].averagekWh) *light4;
+ var cfl2PerYear = (((lights[4].wattsUsed * (lightCost[0].HoursPerDay * 365)) / 1000) * lightCost[0].averagekWh)*light5;
+ var ledPerYear = (((lights[5].wattsUsed * (lightCost[0].HoursPerDay * 365)) / 1000) * lightCost[0].averagekWh)*light6;
+
+var userAllLightsCost = filamentPerYear + halogen1PerYear+ halogen2PerYear + cfl1PerYear + cfl2PerYear + ledPerYear;
+var numberOfBulbs = parseInt(light1) + parseInt(light2) + parseInt(light3) +parseInt(light4) +parseInt(light5) + parseInt(light6);
+var allLed = numberOfBulbs * (((lights[5].wattsUsed * (lightCost[0].HoursPerDay * 365)) / 1000) * lightCost[0].averagekWh);
+var savings = userAllLightsCost - allLed;
+
+
+  console.log(filamentPerYear);
+    console.log(halogen1PerYear);
+      console.log(halogen2PerYear);
+        console.log(cfl1PerYear);
+          console.log(cfl2PerYear);
+            console.log(ledPerYear);
+            console.log(userAllLightsCost);
+                        console.log(numberOfBulbs);
+                        console.log(allLed);
+
+
+   savingsText = "On 3 hours per day it will cost you £" + userAllLightsCost.toFixed(2) + " per year to run your lights." + "If you are using LED for all your lights it will cost you £"
+ + allLed.toFixed(2) + " per year. That's a saving of £" + savings.toFixed(2) + "!";
+
+ console.log(savingsText);
+
+ document.getElementById('lightSavings').innerHTML = savingsText;
+
+
+
 }

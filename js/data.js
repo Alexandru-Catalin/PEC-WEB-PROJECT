@@ -39,6 +39,53 @@ var insulation = [
 
 ]
 
+var lightCost = [
+{
+  averagekWh: 0.15,
+  HoursPerDay: 3,
+},
+]
+
+var lights = [
+  {
+    id: '1',
+    type: 'Filament Bulbs',
+    lifespan: 1200,
+    wattsUsed: 60,
+  },
+  {
+    id: '2',
+    type: 'Halogen Bulbs (Normal)',
+    lifespan: 1500,
+    wattsUsed: 42,
+  },
+  {
+    id: '3',
+    type: 'Halogen Bulbs (Spotlight)',
+    lifespan: 1500,
+    wattsUsed: 42,
+  },
+  {
+    id: '4',
+    type: 'CFL',
+    lifespan: 8000,
+    wattsUsed: 12,
+  },
+  {
+    id: '5',
+    type: 'CFL (Spotlight)',
+    lifespan: 8000,
+    wattsUsed: 12,
+  },
+  {
+    id: '6',
+    type: 'LED',
+    lifespan: 25000,
+    wattsUsed: 10,
+  },
+
+]
+
 var solutions = [
   {
     id: 'S1',
@@ -193,5 +240,6 @@ var solutions = [
     title: 'No Draught Prevention Needed',
     text: 'Advise here',
   },
+  
 
 ]

@@ -1165,8 +1165,8 @@
 
 
 <div id="S40" style="display:none;">
-      <section class="page-section text-dark text-center py-5 w3-animate-opacity">
-        <header class="page-section-header container py-3">
+      <section class="page-section bg-secondary text-light text-center py-5 w3-animate-opacity">
+        <header class="page-section-header container py-3"><hr>
           <div class="row justify-content-center">
             <div class="col-11 col-sm-10 col-md-8">
               <h2 class="page-section-title">Which one looks like the light bulb of your home?</h2>
@@ -1175,61 +1175,66 @@
           </div>
         </header>
 
-        <section class="layout-multicolumn container">
-              <form action="/action_page.php">
+        <section class="layout-multicolumn container py-5">
+
+              <form id="lightSurvey" name="lightSurvey">
 
           <div class="row justify-content-center family-sans text-uppercase ">
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-
                 <img class="layout-image img-thumbnail" src="images/lb1.jpg" alt="Monster Image 01">
-
-                Insert number of lights:<input type="number"><br>
+                Insert number of lights:<br><input type="number" name="light1" style="width:28%; text-align:center"><br>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-
                 <img class="layout-image img-thumbnail" src="images/lb2.jpg" alt="Monster Image 02">
-
-                Insert number of lights:<input type="number"><br>
-
+                Insert number of lights:<br><input type="number" name="light2" style="width:28%; text-align:center"><br>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-
                 <img class="layout-image img-thumbnail" src="images/lb3.jpg" alt="Monster Image 03">
-
-                Insert number of lights:<input type="number"><br>
-
+                Insert number of lights:<br><input type="number" name="light3" style="width:28%; text-align:center"><br>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-
                 <img class="layout-image img-thumbnail" src="images/lb4.jpg" alt="Monster Image 04">
-
-                Insert number of lights:<input type="number"><br>
-
+                Insert number of lights:<br><input type="number" name="light4" style="width:28%; text-align:center"><br>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-
                 <img class="layout-image img-thumbnail" src="images/lb5.jpg" alt="Monster Image 04">
-
-                Insert number of lights:<input type="number"><br>
-
+                Insert number of lights:<br><input type="number" name="light5" style="width:28%; text-align:center"><br>
             </section>
 
             <section class="mb-5 col-10 col-md-6 col-lg-4 col-xl-4">
-
                 <img class="layout-image img-thumbnail" src="images/lb6.jpg" alt="Monster Image 04">
-
-                Insert number of lights:<input type="number"><br>
-
+                Insert number of lights:<br><input type="number" name="light6" style="width:28%; text-align:center"><br>
             </section>
-          </form>
+
+
+            <a onclick="nextSection('S25');validateLightSurvey();" href="javascript:void(0) #S25" class="button text-center m-3 px-5 py-2">Submit</a>
           </div>
+        </form>
+
         </section>
       </div>
+
+
+      <div id="S25" style="display:none;">
+            <section class="layout-hero  align-items-center text-dark text-center py-5 w3-animate-opacity">
+              <div class="container">
+                <div class="row justify-content-center py-3">
+                  <div class="col-11 col-sm-10 col-md-8">
+                    <h3 class="page-section-title">Savings in Lighting</h3>
+                    <p id="lightSavings"></p>
+                  </div>
+                </div>
+                <div class="row justify-content-center py-3">
+                <a onclick="nextSection('OB1');" href="javascript:void(0) #OB1" class="button text-center m-3 px-5 py-2">Next</a>
+              </div>
+            </div>
+            </section>
+          </div>
 
     <div id="OB1" style="display:none;">
       <section class="layout-hero bg-secondary  align-items-center text-light text-center py-5 w3-animate-opacity">
@@ -1246,6 +1251,8 @@
       </div>
       </section>
     </div>
+
+
 
 <div id="OB2" style="display:none;">
       <section class="layout-hero bg-secondary  align-items-center text-light text-center py-5 w3-animate-opacity">
@@ -1405,7 +1412,7 @@
                     </div>
                   </div>
                   <div class="row justify-content-center py-3">
-                  <a onclick="finishOther('SUM3','S24')" href="javascript:void(0)" class="button text-center m-3 px-5 py-2">See the summary</a>
+                  <a onclick="nextSection('SUM3'); hideSection('page-other'); displaySummary3();" href="javascript:void(0)" class="button text-center m-3 px-5 py-2">See the summary</a>
                 </div>
               </div>
               </section>
@@ -1476,15 +1483,12 @@
           <section class=" card mb-5 ">
 
             <div class="card-body">
-              <h4 class="layout-title card-title mb-5">Would you like to send your details to PEC so they can conatact you back? (Optional)</h4>
+              <h4 class="layout-title card-title mb-5">Would you like to send yourself these solutions</h4>
 
 
 
 
-
-            <div id="form">
-
-                  <form target="_top" name="myForm" action="mailto:tkcseow@gmail.com;alexandrumarcu479@gmail.com" onsubmit="return validateForm()" method="post">
+                  <form id="form" target="_top" name="myForm" action="mailto:tkcseow@gmail.com" onsubmit="return validateForm()" method="post" enctype="text/plain">
 
                     <label for="fname">First Name</label><br>
                     <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
@@ -1495,7 +1499,8 @@
                     <br><label for="email">Email Address</label><br>
                     <input type="text" id="email" name="email" placeholder="Your email address.." required>
 
-                    <input id="sendCheck" type="checkbox" name="pec" value="sendtopec" onclick="SendToPEC()"> Would you like Plymouth Energy Community to contact you back?
+                    <br><br>
+                    <input id="sendCheck" type="checkbox" name="pec" value="sendtopec" onclick="SendToPEC()"> (Optional) Would you like Plymouth Energy Community to contact you back?
 
                     <div id="sendToPEC" style="display:none">
 
@@ -1506,11 +1511,19 @@
                       <textarea id="msage" name="message" rows="10" cols="30" placeholder="Your message here.."></textarea>
 
                     </div>
+                    <br><br>
                     <input type="submit" value="Send">
 
                   </form>
                 </div>
-  </div>
+
+
+              <!-- <div id="mailBody">
+                <br>  Hi <div id="fnamebody"></div> <div id="lnamebody"></div>,
+
+
+              </div> -->
+
 
 
 
