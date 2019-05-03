@@ -1484,23 +1484,28 @@
 
             <div id="form">
 
-                  <form action="mailto:tkcseow@gmail.com" method="post" enctype="text/plain">
+                  <form name="myForm" action="mailto:tkcseow@gmail.com" onsubmit="return validateForm()" method="post">
 
                     <label for="fname">First Name</label><br>
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
                     <br><label for="lname">Last Name</label><br>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                    <br><label for="ctnum">Contact Number</label><br>
-                    <input type="number" id="ctnum" name="contactnumber" placeholder="Your contact number..">
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
                     <br><label for="email">Email Address</label><br>
-                    <input type="text" id="email" name="email" placeholder="Your email address..">
+                    <input type="text" id="email" name="email" placeholder="Your email address.." required>
 
-                    <br><label for="msage">Message</label>
-                    <textarea id="msage" name="message" rows="10" cols="30" placeholder="Your message here.."></textarea>
+                    <input type="checkbox" name="pec" value="sendtopec"> Would you like Plymouth Energy Community to contact you back?
 
+                    <div id="sendToPEC" style="display:none">
+
+                      <br><label for="ctnum">Contact Number</label><br>
+                      <input type="number" id="ctnum" name="contactnumber" placeholder="Your contact number..">
+
+                      <br><label for="msage">Comments</label>
+                      <textarea id="msage" name="message" rows="10" cols="30" placeholder="Your message here.."></textarea>
+
+                    </div>
                     <input type="submit" value="Send">
 
                   </form>

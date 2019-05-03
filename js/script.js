@@ -558,3 +558,22 @@ function closeNav() {
   isNavOpen = false;
 
 }
+
+
+function validateForm() {
+  var x = document.forms["myForm"]["fname"].value;
+  var isSendingToPEC = false;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
