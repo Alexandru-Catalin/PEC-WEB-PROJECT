@@ -196,19 +196,6 @@ function calculateWall()
 
   }
 
-  if (wallPic == 3)
-  {
-    if (before1930 == true) {
-      nextSection('S99');
-    }
-    if (after1930 == true) {
-      nextSection('S99');
-    }
-    if (noIdea == true) {
-      nextSection('S99');
-    }
-
-}
 
 if (wallPic == 4)
 {
